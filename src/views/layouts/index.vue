@@ -18,21 +18,34 @@ export default {
   name: 'AppLayout',
   data() {
     return {
-      tabbars: [
-        {
-          title: '首页',
-          to: {
-            name: 'Home'
-          },
-          icon: 'home-o'
+      tabbars: [{
+        title: '首页',
+        to: {
+          name: 'Home'
         },
-        {
-          title: '关于我',
-          to: {
-            name: 'About'
-          },
-          icon: 'user-o'
-        }
+        icon: 'home-o'
+      },
+      {
+        title: '随心看',
+        to: {
+          name: 'Some'
+        },
+        icon: 'user-o'
+      },
+      {
+        title: '片库',
+        to: {
+          name: 'Lib'
+        },
+        icon: 'user-o'
+      },
+      {
+        title: '我的',
+        to: {
+          name: 'User'
+        },
+        icon: 'user-o'
+      }
       ]
     }
   },

@@ -1,54 +1,70 @@
 <template>
-  <div>
-    <van-tabbar fixed route v-model="active" @change="handleChange">
-      <van-tabbar-item v-for="(item, index) in data" :to="item.to" :icon="item.icon" :key="index">
-        {{ item.title }}
-      </van-tabbar-item>
-    </van-tabbar>
-  </div>
+  <van-tabbar v-model="active" class="active_tab">
+    <van-tabbar-item v-for="(item,index) in tabbars" :key="index" @click="tab(index,item.name)">
+      <span :class="currIndex == index ? active:''">{{item.title}}</span>
+      <template slot="icon" slot-scope="props">
+        <img :src="props.active ? item.active : item.normal">
+      </template>
+    </van-tabbar-item>
+  </van-tabbar>
 </template>
+
 <script>
 export default {
-  name: 'TabBar',
-  props: {
-    defaultActive: {
-      type: Number,
-      default: 0
-    },
-    data: {
-      type: Array,
-      default: () => {
-        return []
-      }
-    }
-  },
+  name: 'Tabbar',
   data() {
     return {
-      active: this.defaultActive
+      currIndex: 0,
+      active: 0,
+      tabbars: [{
+        name: 'home',
+        title: '首页',
+        normal: require('../../static/home_active.png'),
+        active: require('../../static/home_inactive.png')
+      },
+      {
+        name: 'Some',
+        title: '首页',
+        normal: require('../../static/some_active.png'),
+        active: require('../../static/some_inactive.png')
+      },
+      {
+        name: 'Lib',
+        title: '首页',
+        normal: require('../../static/lib_active.png'),
+        active: require('../../static/lib_inactive.png')
+      },
+      {
+        name: 'User',
+        title: '首页',
+        normal: require('../../static/user_active.png'),
+        active: require('../../static/user_inactive.png')
+      }
+      ]
     }
   },
   methods: {
-    handleChange(value) {
-      this.$emit('change', value)
+    tab(index, val) {
+      this.currIndex = index
+      this.$router.push(val)
     }
   }
 }
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
-h3 {
-  margin: 40px 0 0;
+<style lang="scss" scoped>
+.active_tab img {
+  width: 26px;
+  height: 26px;
 }
-ul {
-  list-style-type: none;
-  padding: 0;
+
+.van-tabbar-item--active {
+  color: #ffc53d;
 }
-li {
-  display: inline-block;
-  margin: 0 10px;
+.van-tabbar-item {
+  color: #dddddd;
 }
-a {
-  color: #42b983;
+.van-tabbar {
+  background-color: #333;
 }
 </style>
