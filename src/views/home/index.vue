@@ -1,11 +1,11 @@
 <!-- home -->
+
 <template>
   <div class="index-container">
-    <van-tabs v-model="active">
-      <van-tab title="标签 1">内容 1</van-tab>
-      <van-tab title="标签 2">内容 2</van-tab>
-      <van-tab title="标签 3">内容 3</van-tab>
-      <van-tab title="标签 4">内容 4</van-tab>
+    <van-tabs line-width="20" line-height="4" color="#ffc53d" background="#333" v-model="active" class="van_tabs" sticky swipeable>
+      <van-tab title-style="font:16px;color:#999" title="放映厅">放映厅111</van-tab>
+      <van-tab title-style="font:16px;color:#999" title="推荐">推荐</van-tab>
+      <van-tab title-style="font:16px;color:#999" title="专题">专题</van-tab>
     </van-tabs>
   </div>
 </template>
@@ -19,7 +19,7 @@ Vue.use(Tabs)
 export default {
   data() {
     return {
-      active: 2
+      active: 0
     }
   },
 
@@ -32,4 +32,5 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import '../../styles/home/index.scss';
 </style>

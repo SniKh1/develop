@@ -14,7 +14,7 @@
     "axios": "^0.19.2",
     "core-js": "^3.6.4",
     "lib-flexible": "^0.3.2",
-    "lodash": "^4.17.15",
+    "lodash": "^4.17.20",
     "regenerator-runtime": "^0.13.5",
     "vant": "^2.10.2",
     "vue": "^2.6.11",
@@ -23,15 +23,11 @@
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "~4.5.0",
-    "@vue/cli-plugin-eslint": "~4.5.0",
     "@vue/cli-plugin-router": "~4.5.0",
     "@vue/cli-plugin-vuex": "~4.5.0",
     "@vue/cli-service": "~4.5.0",
-    "babel-eslint": "^10.1.0",
     "babel-plugin-import": "^1.13.0",
     "babel-plugin-transform-remove-console": "^6.9.4",
-    "eslint": "^6.7.2",
-    "eslint-plugin-vue": "^6.2.2",
     "node-sass": "^4.14.1",
     "postcss-pxtorem": "^5.1.1",
     "sass-loader": "^8.0.2",
@@ -39,7 +35,6 @@
     "vue-template-compiler": "^2.6.11",
     "webpack-bundle-analyzer": "^3.8.0"
   },
-  "main": ".eslintrc.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/sunniejs/develop.git"
