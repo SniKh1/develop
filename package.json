@@ -43,5 +43,6 @@
   "bugs": {
     "url": "https://github.com/sunniejs/develop/issues"
   },
-  "homepage": "https://github.com/sunniejs/develop#readme"
+  "homepage": "https://github.com/sunniejs/develop#readme",
+  "main": ".postcssrc.js"
 }
