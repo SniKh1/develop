@@ -1,0 +1,62 @@
+html {
+  img {
+    -webkit-mask: -webkit-linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 1), rgba(0, 0, 0, 1), rgba(12, 12, 12, 0.397));
+  }
+
+  .screen-container {
+    padding-bottom: 2%;
+
+    .swipe_box {
+      .swipe_item {
+        width : 100%;
+        height: auto;
+      }
+
+    }
+
+    .custom-indicator {
+      position : absolute;
+      right    : 5px;
+      bottom   : 5px;
+      padding  : 2px 5px;
+      font-size: 12px;
+
+      .van-swipe__indicators {
+        right: 5%;
+        left : auto;
+
+        .van-swipe__indicator--active {
+          width           : 14px;
+          height          : 4px;
+          background-color: #ffc53d;
+          border-radius   : 12px;
+        }
+
+        i {
+          width        : 10px;
+          height       : 4px;
+          border-radius: 18px;
+        }
+      }
+    }
+
+    .swipe_info {
+      position      : absolute;
+      top           : 5.5rem;
+      font-family   : Source Han Sans CN;
+      font-size     : 18px;
+      font-weight   : normal;
+      font-stretch  : normal;
+      line-height   : 24px;
+      letter-spacing: 0px;
+      color         : #ffff;
+      white-space   : nowrap;
+      padding-left  : 5%;
+
+      .swipe_score {
+        padding-left: 5%;
+        color       : #ffc53d;
+      }
+    }
+  }
+}

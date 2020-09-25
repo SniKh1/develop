@@ -5,11 +5,26 @@ html {
   }
 
   .index-container {
-    .van_tabs {
-      padding: 0 22%;
+    padding-bottom: 2%;
 
-      .van-sticky {
-        padding: 0 22%;
+    .van_tabs {
+      van-tab {}
+
+      // padding: 0 0 0 22%;
+
+      .search_icon_box {
+        display: flex;
+
+        img {
+          width: 40%;
+          margin: 0 auto;
+        }
+
+
+      }
+
+      .screen_box {
+        padding-top: 2%;
       }
     }
   }
