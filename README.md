@@ -7,7 +7,7 @@
 [查看 demo](https://solui.cn/develop/#/) 建议手机端查看
 
 <p>
-  <img src="./static/demo.png" width="320" style="display:inline;">
+  <img src="./static/img/demo.png" width="320" style="display:inline;">
 </p>
 
 ### Node 版本要求
@@ -1136,13 +1136,13 @@ Vscode setting.json 设置
 回复加群，即可加入”前端仙女群“
 
  <p>
-  <img src="./static/gognzhonghao.jpg" width="256" style="display:inline;">
+  <img src="./static/img/gognzhonghao.jpg" width="256" style="display:inline;">
 </p>
 
 扫描添加下方的微信并备注 Sol 加交流群，交流学习，及时获取代码最新动态。
 
 <p>
-  <img src="./static/me.png" width="256" style="display:inline;">
+  <img src="./static/img/me.png" width="256" style="display:inline;">
 </p>
  
 如果对你有帮助送我一颗小星星（づ￣3￣）づ╭❤～

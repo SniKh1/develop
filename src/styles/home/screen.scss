@@ -3,60 +3,162 @@ html {
     -webkit-mask: -webkit-linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 1), rgba(0, 0, 0, 1), rgba(12, 12, 12, 0.397));
   }
 
+  .layout_title {
+    font-family   : Source Han Sans CN;
+    font-size     : 16px;
+    font-weight   : normal;
+    font-stretch  : normal;
+    line-height   : 21px;
+    letter-spacing: 0px;
+    color         : #ffffff;
+    padding-left  : 4%;
+    display       : flex;
+    align-items   : center;
+
+    &:before {
+      content         : "";
+      display         : inline-flex;
+      width           : 0.18rem;
+      height          : 0.505rem;
+      background-color: #ffc53d;
+      border-radius   : 21px;
+      margin-right    : 3.9%;
+    }
+  }
+
   .screen-container {
     padding-bottom: 2%;
 
-    .swipe_box {
-      .swipe_item {
-        width : 100%;
-        height: auto;
-      }
-
-    }
-
-    .custom-indicator {
-      position : absolute;
-      right    : 5px;
-      bottom   : 5px;
-      padding  : 2px 5px;
-      font-size: 12px;
-
-      .van-swipe__indicators {
-        right: 5%;
-        left : auto;
-
-        .van-swipe__indicator--active {
-          width           : 14px;
-          height          : 4px;
-          background-color: #ffc53d;
-          border-radius   : 12px;
+    .banner {
+      .swipe_box {
+        .swipe_item {
+          width : 100%;
+          height: 220px;
         }
 
-        i {
-          width        : 10px;
-          height       : 4px;
-          border-radius: 18px;
+      }
+
+      .custom-indicator {
+        position : absolute;
+        right    : 5px;
+        bottom   : 5px;
+        padding  : 2px 5px;
+        font-size: 12px;
+
+        .van-swipe__indicators {
+          right: 5%;
+          left : auto;
+
+          .van-swipe__indicator--active {
+            width           : 14px;
+            height          : 4px;
+            background-color: #ffc53d;
+            border-radius   : 12px;
+          }
+
+          i {
+            width        : 10px;
+            height       : 4px;
+            border-radius: 18px;
+          }
+        }
+      }
+
+      .swipe_info {
+        position         : absolute;
+        // top           : 42.85%;
+        top              : 6.5rem;
+        font-family      : Source Han Sans CN;
+        font-size        : 18px;
+        font-weight      : normal;
+        font-stretch     : normal;
+        line-height      : 24px;
+        letter-spacing   : 0px;
+        color            : #ffff;
+        white-space      : nowrap;
+        padding-left     : 4%;
+
+        .swipe_score {
+          padding-left: 5%;
+          color       : #ffc53d;
         }
       }
     }
 
-    .swipe_info {
-      position      : absolute;
-      top           : 5.5rem;
-      font-family   : Source Han Sans CN;
-      font-size     : 18px;
-      font-weight   : normal;
-      font-stretch  : normal;
-      line-height   : 24px;
-      letter-spacing: 0px;
-      color         : #ffff;
-      white-space   : nowrap;
-      padding-left  : 5%;
+    .lately {
+      padding-top: 3.396%;
 
-      .swipe_score {
-        padding-left: 5%;
-        color       : #ffc53d;
+      #list {
+        overflow-x  : auto; //设置x轴可滑动 
+        overflow-y  : hidden; //设置x轴可滑动 
+        list-style  : none; //去掉li上的小点 
+        white-space : nowrap; //元素不换行 
+        width       : auto; //(宽度) 
+        padding-top : 5%;
+        padding-left: 4%;
+
+        &::-webkit-scrollbar {
+          width: 0;
+        }
+
+        .underl {
+          margin-left: 0px !important;
+        }
+
+        .item {
+          margin-left: 6px; //每个li设置间距为20px 
+          display    : inline-block; //让所有的li在一行 注意这里不能用float:left 因为设置float后里超过一屏后会自动换行 
+          width      : 37.87%;
+          position   : relative;
+
+          img {
+            width        : 100%;
+            height       : 90.234px;
+            border-radius: 10px 0px 10px 0px;
+          }
+
+          .lately_info {
+            .lately_info_ab {
+              color   : #ffff;
+              display : flex;
+              position: absolute;
+              bottom  : 35%;
+              width   : 100%;
+
+              .lately_tip {
+                padding-left: 4.2%;
+              }
+
+              .lately_score {
+                padding-right: 4.2%;
+                margin-left  : auto;
+                color        : #ffc53d
+              }
+            }
+
+            .lately_info_bt {
+              .lately_name {
+                font-size     : 14px;
+                line-height   : 19px;
+                letter-spacing: 0px;
+                color         : #ffffff;
+              }
+
+              .lately_time {
+                font-size     : 10px;
+                line-height   : 14px;
+                letter-spacing: 0px;
+                color         : #999999;
+              }
+            }
+
+          }
+        }
+
       }
+
     }
+
+    .rot {}
   }
 }

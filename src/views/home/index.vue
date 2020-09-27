@@ -3,7 +3,7 @@
 <template>
   <div class="index-container">
     <van-tabs line-width="20" line-height="4" color="#ffc53d" title-active-color="#000" background="#333" v-model="active" class="van_tabs"
-              @click="tab" @disabled="onClickDisabled" sticky swipeable azy-render>
+              @click="tab" @disabled="onClickDisabled" sticky azy-render>
       <van-tab disabled>
       </van-tab>
       <van-tab>
@@ -35,7 +35,7 @@
       <van-tab disabled>
         <template #title>
           <div class="search_icon_box">
-            <img src="../../../static/search_icon.png" alt="">
+            <img src="../../../static/img/search_icon.png" alt="">
           </div>
         </template>
       </van-tab>
