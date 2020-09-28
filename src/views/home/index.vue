@@ -31,6 +31,11 @@
             专题
           </span>
         </template>
+        <template>
+          <div class="screen_box">
+            <demo></demo>
+          </div>
+        </template>
       </van-tab>
       <van-tab disabled>
         <template #title>
@@ -50,6 +55,8 @@ import Vue from 'vue'
 import { Tab, Tabs } from 'vant'
 import { Toast } from 'vant'
 import screen from './screen'
+import demo from './demo'
+
 Vue.use(Tab)
 Vue.use(Tabs)
 export default {
@@ -71,7 +78,8 @@ export default {
     },
   },
   components: {
-    'screen': screen  //将别名demo 变成 组件 Demo
+    'screen': screen,  //将别名demo 变成 组件 Demo
+    'demo': demo  //将别名demo 变成 组件 Demo
   }
 }
 </script>

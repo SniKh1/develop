@@ -1,19 +1,14 @@
 html {
   img {
-    -webkit-mask: -webkit-linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 1), rgba(0, 0, 0, 1), rgba(12, 12, 12, 0.397));
+    -webkit-mask-image: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0, rgba(255, 255, 255, .6) 0%, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 55%, rgba(255, 255, 255, .6) 85%, rgba(255, 255, 255, 0) 100%);
   }
 
   .layout_title {
-    font-family   : Source Han Sans CN;
-    font-size     : 16px;
-    font-weight   : normal;
-    font-stretch  : normal;
-    line-height   : 21px;
-    letter-spacing: 0px;
-    color         : #ffffff;
-    padding-left  : 4%;
-    display       : flex;
-    align-items   : center;
+    font-size  : 16px;
+    color      : #ffffff;
+    padding    : 0 4%;
+    display    : flex;
+    align-items: center;
 
     &:before {
       content         : "";
@@ -24,11 +19,18 @@ html {
       border-radius   : 21px;
       margin-right    : 3.9%;
     }
+
+    & span {
+      font-size  : 12px;
+      color      : #999999;
+      margin-left: auto;
+    }
   }
 
   .screen-container {
     padding-bottom: 2%;
 
+    //banner
     .banner {
       .swipe_box {
         .swipe_item {
@@ -85,6 +87,7 @@ html {
       }
     }
 
+    //最近观看
     .lately {
       padding-top: 3.396%;
 
@@ -159,6 +162,133 @@ html {
 
     }
 
-    .rot {}
+    //大家都在追
+    .rot {
+      // background-color: #333;
+
+      img {
+        -webkit-mask-image: none;
+
+      }
+
+      .rot_info_ab {
+        color      : #ffff;
+        display    : flex;
+        position   : absolute;
+        bottom     : 2%;
+        width      : 100%;
+        text-shadow: 0px 0px 2px #fff;
+
+        .rot_tip {
+          padding-left: 4.2%;
+        }
+
+        .rot_score {
+          padding-right: 4.2%;
+          margin-left  : auto;
+          color        : #ffc53d
+        }
+
+      }
+
+      .rot_title_name {
+        text-align    : center;
+        font-size     : 14px;
+        color         : #fff;
+        padding-bottom: 2%;
+      }
+    }
+
+    //口碑大剧等你追
+    .drama {
+      padding-top: 3.396%;
+
+      #list {
+        overflow-x  : auto; //设置x轴可滑动 
+        overflow-y  : hidden; //设置x轴可滑动 
+        list-style  : none; //去掉li上的小点 
+        white-space : nowrap; //元素不换行 
+        width       : auto; //(宽度) 
+        padding-top : 5%;
+        padding-left: 4%;
+
+        &::-webkit-scrollbar {
+          width: 0;
+        }
+
+        .underl {
+          margin-left: 0px !important;
+        }
+
+        .item {
+          margin-left: 6px; //每个li设置间距为20px 
+          display    : inline-block; //让所有的li在一行 注意这里不能用float:left 因为设置float后里超过一屏后会自动换行 
+          width      : 37.87%;
+          position   : relative;
+
+          img {
+            width        : 100%;
+            border-radius: 10px 0px 10px 0px;
+          }
+
+          .drama_info {
+            .drama_info_ab {
+              color   : #ffff;
+              display : flex;
+              position: absolute;
+              bottom  : 15%;
+              width   : 100%;
+
+              .drama_tip {
+                padding-left: 4.2%;
+              }
+
+              .drama_score {
+                padding-right: 4.2%;
+                margin-left  : auto;
+                color        : #ffc53d
+              }
+            }
+
+            .drama_info_bt {
+              .drama_name {
+                font-size     : 14px;
+                line-height   : 19px;
+                letter-spacing: 0px;
+                color         : #ffffff;
+              }
+
+
+            }
+
+          }
+        }
+
+      }
+
+    }
+
+    //广告栏
+    .tabbar {
+      width: 100%;
+
+      #list {
+        display: flex;
+        padding: 0 4%;
+
+        .underl {
+          margin-left: 0;
+        }
+
+        li {
+          margin-left: 2%;
+          width      : 33%;
+
+          img {
+            width: 100%;
+          }
+        }
+      }
+    }
   }
 }
