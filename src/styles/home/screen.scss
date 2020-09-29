@@ -1,12 +1,13 @@
 html {
   img {
     -webkit-mask-image: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0, rgba(255, 255, 255, .6) 0%, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 55%, rgba(255, 255, 255, .6) 85%, rgba(255, 255, 255, 0) 100%);
+    border-radius     : 10px 0px 10px 0px
   }
 
   .layout_title {
     font-size  : 16px;
     color      : #ffffff;
-    padding    : 0 4%;
+    padding    : 5% 4%;
     display    : flex;
     align-items: center;
 
@@ -81,15 +82,14 @@ html {
         padding-left     : 4%;
 
         .swipe_score {
-          padding-left: 5%;
-          color       : #ffc53d;
+          color: #ffc53d;
         }
       }
     }
 
     //最近观看
     .lately {
-      padding-top: 3.396%;
+
 
       #list {
         overflow-x  : auto; //设置x轴可滑动 
@@ -97,7 +97,6 @@ html {
         list-style  : none; //去掉li上的小点 
         white-space : nowrap; //元素不换行 
         width       : auto; //(宽度) 
-        padding-top : 5%;
         padding-left: 4%;
 
         &::-webkit-scrollbar {
@@ -166,6 +165,7 @@ html {
     .rot {
       // background-color: #333;
 
+
       img {
         -webkit-mask-image: none;
 
@@ -201,7 +201,7 @@ html {
 
     //口碑大剧等你追
     .drama {
-      padding-top: 3.396%;
+
 
       #list {
         overflow-x  : auto; //设置x轴可滑动 
@@ -209,7 +209,6 @@ html {
         list-style  : none; //去掉li上的小点 
         white-space : nowrap; //元素不换行 
         width       : auto; //(宽度) 
-        padding-top : 5%;
         padding-left: 4%;
 
         &::-webkit-scrollbar {
@@ -223,7 +222,7 @@ html {
         .item {
           margin-left: 6px; //每个li设置间距为20px 
           display    : inline-block; //让所有的li在一行 注意这里不能用float:left 因为设置float后里超过一屏后会自动换行 
-          width      : 37.87%;
+          width      : 28%;
           position   : relative;
 
           img {
@@ -272,6 +271,12 @@ html {
     .tabbar {
       width: 100%;
 
+
+      img {
+        -webkit-mask-image: none;
+
+      }
+
       #list {
         display: flex;
         padding: 0 4%;
@@ -290,5 +295,148 @@ html {
         }
       }
     }
+
+    //专区电影
+    .special {
+
+
+      #list {
+        overflow-x          : auto; //设置x轴可滑动 
+        overflow-y          : hidden; //设置x轴可滑动 
+        list-style          : none; //去掉li上的小点 
+        white-space         : nowrap; //元素不换行 
+        width               : auto; //(宽度) 
+        padding-left        : 4%;
+        background-image    : url(../../../static/img/bg_harry.png);
+        /*这个是按从左往右，从上往下的百分比位置进行调整*/
+        background-repeat   : no-repeat;
+        // background-size  : 50% 50%;
+        padding-top         : 43.6%;
+
+        /*还有repeat-x,y等*/
+        &::-webkit-scrollbar {
+          width: 0;
+        }
+
+        .underl {
+          margin-left: 0px !important;
+        }
+
+        .item {
+          margin-left: 6px; //每个li设置间距为20px 
+          display    : inline-block; //让所有的li在一行 注意这里不能用float:left 因为设置float后里超过一屏后会自动换行 
+          width      : 28%;
+          position   : relative;
+
+          img {
+            width        : 100%;
+            border-radius: 10px 0px 10px 0px;
+          }
+
+          .special_info {
+
+            .special_info_ab {
+              color   : #ffff;
+              display : flex;
+              position: absolute;
+              bottom  : 15%;
+              width   : 100%;
+
+              .special_tip {
+                padding-left: 4.2%;
+              }
+
+              .special_score {
+                padding-right: 4.2%;
+                margin-left  : auto;
+                color        : #ffc53d
+              }
+            }
+
+            .special_info_bt {
+
+              .special_name {
+                font-size         : 14px;
+                line-height       : 19px;
+                letter-spacing    : 0px;
+                color             : #ffffff;
+                overflow          : hidden;
+                text-overflow     : ellipsis;
+                display           : -webkit-box;
+                /* autoprefixer   : off */
+                -webkit-box-orient: vertical;
+                /* autoprefixer   : on */
+                -webkit-line-clamp: 2;
+              }
+
+
+            }
+
+          }
+        }
+
+      }
+    }
+
+    //广告位
+    .poster {
+      padding-top: 5%;
+
+      img {
+        -webkit-mask-image: none;
+
+      }
+
+    }
+
+    //高能新剧
+    .new {
+
+      // background-color: #333;
+      .layout_title {
+        padding-bottom: 0;
+      }
+
+      img {
+        -webkit-mask-image: none;
+
+      }
+
+      .carousel-3d {
+        padding-left: 4%;
+      }
+
+      .new_info_ab {
+        color      : #ffff;
+        display    : flex;
+        position   : absolute;
+        bottom     : 2%;
+        width      : 100%;
+        text-shadow: 0px 0px 2px #fff;
+
+        .new_tip {
+          padding-left: 4.2%;
+        }
+
+        .new_score {
+          padding-right: 4.2%;
+          margin-left  : auto;
+          color        : #ffc53d
+        }
+
+      }
+
+      .new_title_name {
+        text-align    : left;
+        padding-left  : 4%;
+        font-size     : 14px;
+        color         : #fff;
+        padding-bottom: 2%;
+      }
+    }
+
+    //navbar
+    .navbar {}
+
   }
 }

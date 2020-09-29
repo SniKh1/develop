@@ -51,9 +51,10 @@
         大家都在追
         <span class="layout_title_span">更多></span>
       </span>
-      <carousel-3d :startIndex="0" :inverseScaling="10" :border="0" :perspective="0" :display="5" :animationSpeed="1000" :width="120" :height="160">
+      <carousel-3d :startIndex="5" :inverseScaling="10" :space="120" :border="0" :perspective="0" :display="5" :animationSpeed="1000" :width="120"
+                   :height="160">
         <slide v-for="(item, i) in slides" :index="i" :key="i">
-          <template slot-scope="obj">
+          <template slot-scope=" obj">
             <img :src="item.src" alt="">
             <div class="rot_info_ab">
               <span class="rot_tip">28集全</span>
@@ -93,6 +94,64 @@
         </li>
       </ul>
     </div>
+    <div class="special">
+      <span class="layout_title">
+        专区电影
+      </span>
+      <div>
+        <ul id="list">
+          <li class="item" v-for="(image, index) in special_img" :key="index" :class="index ==0 ? 'underl' : ''">
+            <img v-lazy="image">
+            <div class="special_info">
+              <div class="special_info_ab">
+                <span class="special_score">9.1</span>
+              </div>
+              <div class="special_info_bt">
+                <span class="special_name">哈利波特与凤凰城哈利波特与凤凰城</span>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="poster">
+      <img src="../../../static/img/poster_1.png" alt="">
+    </div>
+    <div class="new">
+      <span class="layout_title">
+        高能新剧
+        <span class="layout_title_span">更多></span>
+      </span>
+      <carousel-3d :loop="false" :startIndex="0" :inverseScaling="5" :space="120" :border="0" :perspective="0" :display="18" :animationSpeed="1000"
+                   :width="120" :height="160">
+        <slide v-for="(item, i) in slides" :index="i" :key="i">
+          <template slot-scope=" obj">
+            <img :src="item.src" alt="">
+            <div class="new_info_ab">
+              <span class="new_tip">28集全</span>
+              <span class="new_score">9.8</span>
+            </div>
+          </template>
+        </slide>
+      </carousel-3d>
+      <div class="new_title_name">蜘蛛侠：平行宇宙</div>
+    </div>
+    <div class="navbar">
+      <van-tabs sticky swipeable color="#333">
+        <van-tab v-for="(bar_title, index) in navbar" :key="index">
+          <template #title>
+            <div class="tab_bar" :class="index == navbar.length-1 ? 'active_bar' : ''">
+              <span class="bar_title_one">{{bar_title}}</span>
+              <span class="bar_title_two">给生活加糖</span>
+            </div>
+            <div class="line">{{index == navbar.length-1 ?  "":"/" }}</div>
+
+          </template>
+          内容 {{ index }}
+        </van-tab>
+      </van-tabs>
+    </div>
+
   </div>
 </template>
 
@@ -104,7 +163,10 @@ import { Swipe, SwipeItem } from 'vant';
 import { Lazyload } from 'vant';
 import { Image as VanImage } from 'vant';
 import Carousel3d from 'vue-carousel-3d'
+import { Tab, Tabs } from 'vant';
 
+Vue.use(Tab);
+Vue.use(Tabs);
 Vue.use(Carousel3d)
 Vue.use(VanImage);
 Vue.use(Lazyload);
@@ -140,6 +202,14 @@ export default {
         require('../../../static/img/tabbar_img2.png'),
         require('../../../static/img/tabbar_img3.png'),
       ],
+      special_img: [
+        require('../../../static/img/drama_img.png'),
+        require('../../../static/img/drama_img.png'),
+        require('../../../static/img/drama_img.png'),
+        require('../../../static/img/drama_img.png'),
+        require('../../../static/img/drama_img.png'),
+        require('../../../static/img/drama_img.png'),
+      ],
       slides: [
         {
           src: require('../../../static/img/rot_img1.png'),
@@ -169,6 +239,14 @@ export default {
           src: require('../../../static/img/rot_img1.png'),
         },
       ],
+      navbar: [
+        "恋爱剧场",
+        "恐怖剧场",
+        "恐怖剧场",
+        "戏剧剧场",
+        "喜剧剧场",
+        "我的剧场",
+      ],
       mySwipeIndex: 0,
 
 
@@ -196,4 +274,73 @@ export default {
 
 <style lang="scss" scoped>
 @import '../../styles/home/screen.scss';
+</style>
+<!-- 覆盖子组件样式 -->
+<style lang="scss">
+.new {
+  width: 100%;
+  .carousel-3d-container {
+    width: 95%;
+    margin-left: 4%;
+    display: block;
+    .carousel-3d-slider:last-child {
+      margin: 0 !important;
+    }
+  }
+}
+.navbar {
+  .van-tabs__nav {
+    background-color: #333;
+    padding-left: 0;
+
+    .van-tab {
+      padding: 0;
+      width: 30%;
+
+      .van-tab__text {
+        width: 100%;
+        display: flex;
+        align-items: center;
+
+        .line {
+          color: #666666;
+        }
+        .tab_bar {
+          width: 100%;
+          text-align: center;
+          display: flex; //给父元素开启flex
+          flex-direction: column; //修改主轴方向
+          flex-wrap: wrap; //开启自动换行
+          align-content: center;
+
+          .bar_title_one {
+            color: #fff;
+            font-size: 18px;
+            padding-bottom: 5%;
+          }
+          .bar_title_two {
+            font-size: 10px;
+            color: #999999;
+          }
+        }
+      }
+    }
+    .van-tabs__line {
+      display: none;
+    }
+    .van-tab--active {
+      .tab_bar {
+        .bar_title_one {
+          color: #ffc53d !important;
+        }
+        .bar_title_two {
+          font-size: 10px;
+          color: #ffffff !important;
+          background-color: #dd9c54;
+          border-radius: 20px;
+        }
+      }
+    }
+  }
+}
 </style>
