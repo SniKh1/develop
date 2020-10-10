@@ -1,4 +1,3 @@
-<!-- home -->
 
 <template>
   <div class="screen-container">
@@ -137,17 +136,32 @@
       <div class="new_title_name">蜘蛛侠：平行宇宙</div>
     </div>
     <div class="navbar">
-      <van-tabs sticky swipeable color="#333">
-        <van-tab v-for="(bar_title, index) in navbar" :key="index">
+      <van-tabs class="" sticky swipeable color="#333" offset-top='44'>
+        <van-tab class="" v-for="(bar_title, index) in navbar" :key="index">
           <template #title>
             <div class="tab_bar" :class="index == navbar.length-1 ? 'active_bar' : ''">
               <span class="bar_title_one">{{bar_title}}</span>
               <span class="bar_title_two">给生活加糖</span>
             </div>
             <div class="line">{{index == navbar.length-1 ?  "":"/" }}</div>
-
           </template>
-          内容 {{ index }}
+          <!-- 内容 {{ index }} -->
+          <template>
+            <div>
+              <van-list v-model:loading="loading" :finished="finished" finished-text="没有更多了" @load="onLoad">
+                <van-cell v-for="item in list" :key="item.title">
+                  <img :src="item.src" alt="">
+                  <div class="flow_info_ab">
+                    <span class="flow_tip">28集全</span>
+                    <span class="flow_score">9.8</span>
+                  </div>
+                  <div class="flow_title_name">
+                    {{item.msg}}
+                  </div>
+                </van-cell>
+              </van-list>
+            </div>
+          </template>
         </van-tab>
       </van-tabs>
     </div>
@@ -248,8 +262,80 @@ export default {
         "我的剧场",
       ],
       mySwipeIndex: 0,
-
-
+      list: [
+        {
+          title: 1,
+          src: require('../../../static/img/flow_1.png'),
+          msg: "小丑"
+        },
+        {
+          title: 2,
+          src: require('../../../static/img/flow_2.png'),
+          msg: "蜘蛛侠：平行宇宙"
+        },
+        {
+          title: 1,
+          src: require('../../../static/img/flow_1.png'),
+          msg: "小丑"
+        },
+        {
+          title: 2,
+          src: require('../../../static/img/flow_2.png'),
+          msg: "蜘蛛侠：平行宇宙"
+        },
+        {
+          title: 1,
+          src: require('../../../static/img/flow_1.png'),
+          msg: "小丑"
+        },
+        {
+          title: 2,
+          src: require('../../../static/img/flow_2.png'),
+          msg: "蜘蛛侠：平行宇宙"
+        },
+        {
+          title: 1,
+          src: require('../../../static/img/flow_1.png'),
+          msg: "小丑"
+        },
+        {
+          title: 2,
+          src: require('../../../static/img/flow_2.png'),
+          msg: "蜘蛛侠：平行宇宙"
+        },
+        {
+          title: 1,
+          src: require('../../../static/img/flow_1.png'),
+          msg: "小丑"
+        },
+        {
+          title: 2,
+          src: require('../../../static/img/flow_2.png'),
+          msg: "蜘蛛侠：平行宇宙"
+        },
+        {
+          title: 1,
+          src: require('../../../static/img/flow_1.png'),
+          msg: "小丑"
+        },
+        {
+          title: 2,
+          src: require('../../../static/img/flow_2.png'),
+          msg: "蜘蛛侠：平行宇宙"
+        },
+        {
+          title: 1,
+          src: require('../../../static/img/flow_1.png'),
+          msg: "小丑"
+        },
+        {
+          title: 2,
+          src: require('../../../static/img/flow_2.png'),
+          msg: "蜘蛛侠：平行宇宙"
+        },
+      ],
+      loading: false,
+      finished: false,
     };
   },
   created() {
@@ -265,7 +351,26 @@ export default {
       console.log(index);
 
       this.mySwipeIndex = index;
-    }
+    },
+    onLoad() {
+      // 异步更新数据
+      // setTimeout 仅做示例，真实场景中一般为 ajax 请求
+      setTimeout(() => {
+        // for (let i = 0; i < 10; i++) {
+        //   this.$data.list.push(this.list.length + 1);
+        // }
+
+        // 加载状态结束
+        this.loading = false;
+
+        // 数据全部加载完成
+        if (this.list.length >= 2) {
+          // debugger
+          console.log(this.list)
+          this.finished = true;
+        }
+      }, 1000);
+    },
   },
   components: {
   },
@@ -276,7 +381,7 @@ export default {
 @import '../../styles/home/screen.scss';
 </style>
 <!-- 覆盖子组件样式 -->
-<style lang="scss">
+<style lang="scss" >
 .new {
   width: 100%;
   .carousel-3d-container {
@@ -288,7 +393,27 @@ export default {
     }
   }
 }
+.rot {
+  .carousel-3d-container {
+    margin-top: 0;
+    margin-bottom: 10px;
+  }
+}
 .navbar {
+  .van-tabs {
+    .van-sticky {
+      & {
+      }
+      height: 42px;
+    }
+    .van-sticky--fixed {
+      top: 42px;
+      .van-tabs__wrap {
+        height: 100px;
+      }
+    }
+  }
+
   .van-tabs__nav {
     background-color: #333;
     padding-left: 0;
@@ -307,6 +432,7 @@ export default {
         }
         .tab_bar {
           width: 100%;
+          height: 120%;
           text-align: center;
           display: flex; //给父元素开启flex
           flex-direction: column; //修改主轴方向
@@ -339,6 +465,62 @@ export default {
           background-color: #dd9c54;
           border-radius: 20px;
         }
+      }
+    }
+  }
+  .van-tabs__content {
+    .van-list {
+      -moz-column-count: 3; /* Firefox */
+      -webkit-column-count: 3; /* Safari 和 Chrome */
+      column-count: 2;
+      -moz-column-gap: 1em;
+      -webkit-column-gap: 1em;
+      column-gap: 1em;
+      padding: 4%;
+      .van-cell {
+        -moz-page-break-inside: avoid;
+        -webkit-column-break-inside: avoid;
+        break-inside: avoid;
+        background-color: #333;
+        padding: 0;
+        padding-bottom: 5%;
+
+        .van-cell__title {
+          display: none;
+        }
+        .van-cell__value {
+          img {
+            width: 100%;
+          }
+          .flow_info_ab {
+            font-size: 12px;
+            width: 100%;
+            display: flex;
+            position: absolute;
+            bottom: 30px;
+
+            .flow_tip {
+              color: #dddddd;
+            }
+            .flow_score {
+              color: #ffc53d;
+              margin-left: auto;
+            }
+          }
+          .flow_title_name {
+            font-size: 14px;
+            color: #fff;
+          }
+        }
+        &::after {
+          display: none;
+        }
+      }
+      .van-list__finished-text {
+        display: none;
+      }
+      .van-list__loading {
+        display: none;
       }
     }
   }

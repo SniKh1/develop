@@ -4,10 +4,22 @@ html {
     border-radius     : 10px 0px 10px 0px
   }
 
+  span {
+
+    overflow     : hidden !important;
+    /*超出部分隐藏*/
+    white-space  : nowrap !important;
+    /*不换行*/
+    text-overflow: ellipsis !important;
+    /*超出部分文字以...显示*/
+
+  }
+
   .layout_title {
     font-size  : 16px;
     color      : #ffffff;
     padding    : 5% 4%;
+    padding-top: 7.5%;
     display    : flex;
     align-items: center;
 
@@ -108,7 +120,7 @@ html {
         }
 
         .item {
-          margin-left: 6px; //每个li设置间距为20px 
+          margin-left: 6px; //每个li设置间距为6px 
           display    : inline-block; //让所有的li在一行 注意这里不能用float:left 因为设置float后里超过一屏后会自动换行 
           width      : 37.87%;
           position   : relative;
@@ -124,11 +136,12 @@ html {
               color   : #ffff;
               display : flex;
               position: absolute;
-              bottom  : 35%;
+              bottom  : 30%;
               width   : 100%;
 
               .lately_tip {
                 padding-left: 4.2%;
+                width       : 100%;
               }
 
               .lately_score {
@@ -175,12 +188,13 @@ html {
         color      : #ffff;
         display    : flex;
         position   : absolute;
-        bottom     : 2%;
+        bottom     : 0%;
         width      : 100%;
         text-shadow: 0px 0px 2px #fff;
 
         .rot_tip {
           padding-left: 4.2%;
+          width       : 100%;
         }
 
         .rot_score {
@@ -240,6 +254,7 @@ html {
 
               .drama_tip {
                 padding-left: 4.2%;
+                width       : 100%;
               }
 
               .drama_score {
@@ -269,8 +284,8 @@ html {
 
     //广告栏
     .tabbar {
-      width: 100%;
-
+      width  : 100%;
+      padding: 10px 0;
 
       img {
         -webkit-mask-image: none;
@@ -334,6 +349,7 @@ html {
           }
 
           .special_info {
+            width: 90%;
 
             .special_info_ab {
               color   : #ffff;
@@ -344,6 +360,7 @@ html {
 
               .special_tip {
                 padding-left: 4.2%;
+                width       : 100%;
               }
 
               .special_score {
@@ -410,12 +427,13 @@ html {
         color      : #ffff;
         display    : flex;
         position   : absolute;
-        bottom     : 2%;
+        bottom     : 0%;
         width      : 100%;
         text-shadow: 0px 0px 2px #fff;
 
         .new_tip {
           padding-left: 4.2%;
+          width       : 100%;
         }
 
         .new_score {
@@ -431,7 +449,7 @@ html {
         padding-left  : 4%;
         font-size     : 14px;
         color         : #fff;
-        padding-bottom: 2%;
+        padding-bottom: 5%;
       }
     }
 

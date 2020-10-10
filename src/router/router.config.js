@@ -21,7 +21,7 @@ export const constantRouterMap = [
       {
         path: '/some',
         name: 'Some',
-        component: () => import('@/views/home/about'),
+        component: () => import('@/views/home/index'),
         meta: { title: '关于我', keepAlive: false }
       },
       {
@@ -33,7 +33,7 @@ export const constantRouterMap = [
       {
         path: '/user',
         name: 'User',
-        component: () => import('@/views/home/about'),
+        component: () => import('@/views/home/index'),
         meta: { title: '关于我', keepAlive: false }
       }
     ]

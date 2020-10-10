@@ -1,8 +1,20 @@
 html {
   * {
-    background-color: #333;
+    // background-color: #333;
     font-family: Source Han Sans CN;
   }
+
+  span {
+
+    overflow     : hidden !important;
+    /*超出部分隐藏*/
+    white-space  : nowrap !important;
+    /*不换行*/
+    text-overflow: ellipsis !important;
+    /*超出部分文字以...显示*/
+
+  }
+
 
   .index-container {
     padding-bottom: 2%;
@@ -16,7 +28,7 @@ html {
         display: flex;
 
         img {
-          width: 40%;
+          width : 40%;
           margin: 0 auto;
         }
 

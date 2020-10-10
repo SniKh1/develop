@@ -12,6 +12,11 @@
             放映厅
           </span>
         </template>
+        <template>
+          <div class="cinema_box">
+            <cinema></cinema>
+          </div>
+        </template>
       </van-tab>
       <van-tab>
         <template #title>
@@ -32,8 +37,8 @@
           </span>
         </template>
         <template>
-          <div class="screen_box">
-            <demo></demo>
+          <div class="special_box">
+            <special></special>
           </div>
         </template>
       </van-tab>
@@ -55,7 +60,8 @@ import Vue from 'vue'
 import { Tab, Tabs } from 'vant'
 import { Toast } from 'vant'
 import screen from './screen'
-import demo from './demo'
+import cinema from './cinema'
+import special from './special'
 
 Vue.use(Tab)
 Vue.use(Tabs)
@@ -78,8 +84,9 @@ export default {
     },
   },
   components: {
-    'screen': screen,  //将别名demo 变成 组件 Demo
-    'demo': demo  //将别名demo 变成 组件 Demo
+    'screen': screen,  //将别名screen变成 组件 screen
+    'cinema': cinema,
+    'special': special,
   }
 }
 </script>
