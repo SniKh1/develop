@@ -15,25 +15,25 @@ export const constantRouterMap = [
       {
         path: '/home',
         name: 'Home',
-        component: () => import('@/views/home/index'),
+        component: () => import('@/views/home/home'),
         meta: { title: '首页', keepAlive: false }
       },
       {
         path: '/some',
         name: 'Some',
-        component: () => import('@/views/home/index'),
+        component: () => import('@/views/home/home'),
         meta: { title: '关于我', keepAlive: false }
       },
       {
         path: '/lib',
         name: 'Lib',
-        component: () => import('@/views/home/index'),
+        component: () => import('@/views/home/home'),
         meta: { title: '首页', keepAlive: false }
       },
       {
         path: '/user',
         name: 'User',
-        component: () => import('@/views/home/index'),
+        component: () => import('@/views/home/home'),
         meta: { title: '关于我', keepAlive: false }
       }
     ]
