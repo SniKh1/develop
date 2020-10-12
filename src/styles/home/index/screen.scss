@@ -1,7 +1,7 @@
 html {
   img {
     -webkit-mask-image: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0, rgba(255, 255, 255, .6) 0%, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 55%, rgba(255, 255, 255, .6) 85%, rgba(255, 255, 255, 0) 100%);
-    border-radius     : 10px 0px 10px 0px
+    border-radius     : 0.2703rem 0rem 0.2703rem 0rem
   }
 
   span {
@@ -16,7 +16,7 @@ html {
   }
 
   .layout_title {
-    font-size  : 16px;
+    font-size  : 0.4324rem;
     color      : #ffffff;
     padding    : 5% 4%;
     padding-top: 7.5%;
@@ -29,12 +29,12 @@ html {
       width           : 0.18rem;
       height          : 0.505rem;
       background-color: #ffc53d;
-      border-radius   : 21px;
+      border-radius   : 0.5676rem;
       margin-right    : 3.9%;
     }
 
     & span {
-      font-size  : 12px;
+      font-size  : 0.3243rem;
       color      : #999999;
       margin-left: auto;
     }
@@ -48,33 +48,33 @@ html {
       .swipe_box {
         .swipe_item {
           width : 100%;
-          height: 220px;
+          height: 5.9459rem;
         }
 
       }
 
       .custom-indicator {
         position : absolute;
-        right    : 5px;
-        bottom   : 5px;
-        padding  : 2px 5px;
-        font-size: 12px;
+        right    : 0.1351rem;
+        bottom   : 0.1351rem;
+        padding  : 0.0541rem 0.1351rem;
+        font-size: 0.3243rem;
 
         .van-swipe__indicators {
           right: 5%;
           left : auto;
 
           .van-swipe__indicator--active {
-            width           : 14px;
-            height          : 4px;
+            width           : 0.3784rem;
+            height          : 0.1081rem;
             background-color: #ffc53d;
-            border-radius   : 12px;
+            border-radius   : 0.3243rem;
           }
 
           i {
-            width        : 10px;
-            height       : 4px;
-            border-radius: 18px;
+            width        : 0.2703rem;
+            height       : 0.1081rem;
+            border-radius: 0.4865rem;
           }
         }
       }
@@ -84,11 +84,11 @@ html {
         // top           : 42.85%;
         top              : 6.5rem;
         font-family      : Source Han Sans CN;
-        font-size        : 18px;
+        font-size        : 0.4865rem;
         font-weight      : normal;
         font-stretch     : normal;
-        line-height      : 24px;
-        letter-spacing   : 0px;
+        line-height      : 0.6486rem;
+        letter-spacing   : 0rem;
         color            : #ffff;
         white-space      : nowrap;
         padding-left     : 4%;
@@ -116,19 +116,19 @@ html {
         }
 
         .underl {
-          margin-left: 0px !important;
+          margin-left: 0rem !important;
         }
 
         .item {
-          margin-left: 6px; //每个li设置间距为6px 
+          margin-left: 0.1622rem; //每个li设置间距为0.1622rem 
           display    : inline-block; //让所有的li在一行 注意这里不能用float:left 因为设置float后里超过一屏后会自动换行 
           width      : 37.87%;
           position   : relative;
 
           img {
             width        : 100%;
-            height       : 90.234px;
-            border-radius: 10px 0px 10px 0px;
+            height       : 2.4388rem;
+            border-radius: 0.2703rem 0rem 0.2703rem 0rem;
           }
 
           .lately_info {
@@ -153,16 +153,16 @@ html {
 
             .lately_info_bt {
               .lately_name {
-                font-size     : 14px;
-                line-height   : 19px;
-                letter-spacing: 0px;
+                font-size     : 0.3784rem;
+                line-height   : 0.5135rem;
+                letter-spacing: 0rem;
                 color         : #ffffff;
               }
 
               .lately_time {
-                font-size     : 10px;
-                line-height   : 14px;
-                letter-spacing: 0px;
+                font-size     : 0.2703rem;
+                line-height   : 0.3784rem;
+                letter-spacing: 0rem;
                 color         : #999999;
               }
             }
@@ -190,7 +190,7 @@ html {
         position   : absolute;
         bottom     : 0%;
         width      : 100%;
-        text-shadow: 0px 0px 2px #fff;
+        text-shadow: 0rem 0rem 0.0541rem #fff;
 
         .rot_tip {
           padding-left: 4.2%;
@@ -207,7 +207,7 @@ html {
 
       .rot_title_name {
         text-align    : center;
-        font-size     : 14px;
+        font-size     : 0.3784rem;
         color         : #fff;
         padding-bottom: 2%;
       }
@@ -230,18 +230,18 @@ html {
         }
 
         .underl {
-          margin-left: 0px !important;
+          margin-left: 0rem !important;
         }
 
         .item {
-          margin-left: 6px; //每个li设置间距为20px 
+          margin-left: 0.1622rem; //每个li设置间距为0.5405rem 
           display    : inline-block; //让所有的li在一行 注意这里不能用float:left 因为设置float后里超过一屏后会自动换行 
           width      : 28%;
           position   : relative;
 
           img {
             width        : 100%;
-            border-radius: 10px 0px 10px 0px;
+            border-radius: 0.2703rem 0rem 0.2703rem 0rem;
           }
 
           .drama_info {
@@ -266,9 +266,9 @@ html {
 
             .drama_info_bt {
               .drama_name {
-                font-size     : 14px;
-                line-height   : 19px;
-                letter-spacing: 0px;
+                font-size     : 0.3784rem;
+                line-height   : 0.5135rem;
+                letter-spacing: 0rem;
                 color         : #ffffff;
               }
 
@@ -285,7 +285,7 @@ html {
     //广告栏
     .tabbar {
       width  : 100%;
-      padding: 10px 0;
+      padding: 0.2703rem 0;
 
       img {
         -webkit-mask-image: none;
@@ -316,17 +316,17 @@ html {
 
 
       #list {
-        overflow-x          : auto; //设置x轴可滑动 
-        overflow-y          : hidden; //设置x轴可滑动 
-        list-style          : none; //去掉li上的小点 
-        white-space         : nowrap; //元素不换行 
-        width               : auto; //(宽度) 
-        padding-left        : 4%;
-        background-image    : url(../../../static/img/bg_harry.png);
+        overflow-x             : auto; //设置x轴可滑动 
+        overflow-y             : hidden; //设置x轴可滑动 
+        list-style             : none; //去掉li上的小点 
+        white-space            : nowrap; //元素不换行 
+        width                  : auto; //(宽度) 
+        padding-left           : 4%;
+        // background-image    : url(../../../static/img/bg_harry.png);
         /*这个是按从左往右，从上往下的百分比位置进行调整*/
-        background-repeat   : no-repeat;
+        background             : no-repeat;
         // background-size  : 50% 50%;
-        padding-top         : 43.6%;
+        padding-top            : 43.6%;
 
         /*还有repeat-x,y等*/
         &::-webkit-scrollbar {
@@ -334,18 +334,18 @@ html {
         }
 
         .underl {
-          margin-left: 0px !important;
+          margin-left: 0rem !important;
         }
 
         .item {
-          margin-left: 6px; //每个li设置间距为20px 
+          margin-left: 0.1622rem; //每个li设置间距为0.5405rem 
           display    : inline-block; //让所有的li在一行 注意这里不能用float:left 因为设置float后里超过一屏后会自动换行 
           width      : 28%;
           position   : relative;
 
           img {
             width        : 100%;
-            border-radius: 10px 0px 10px 0px;
+            border-radius: 0.2703rem 0rem 0.2703rem 0rem;
           }
 
           .special_info {
@@ -373,9 +373,9 @@ html {
             .special_info_bt {
 
               .special_name {
-                font-size         : 14px;
-                line-height       : 19px;
-                letter-spacing    : 0px;
+                font-size         : 0.3784rem;
+                line-height       : 0.5135rem;
+                letter-spacing    : 0rem;
                 color             : #ffffff;
                 overflow          : hidden;
                 text-overflow     : ellipsis;
@@ -429,7 +429,7 @@ html {
         position   : absolute;
         bottom     : 0%;
         width      : 100%;
-        text-shadow: 0px 0px 2px #fff;
+        text-shadow: 0rem 0rem 0.0541rem #fff;
 
         .new_tip {
           padding-left: 4.2%;
@@ -447,7 +447,7 @@ html {
       .new_title_name {
         text-align    : left;
         padding-left  : 4%;
-        font-size     : 14px;
+        font-size     : 0.3784rem;
         color         : #fff;
         padding-bottom: 5%;
       }

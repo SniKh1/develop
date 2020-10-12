@@ -3,7 +3,7 @@
   <div class="cinema-container">
     <div class="hot">
       <span class="layout_title">
-        <img src="../../../static/img/remen.png" alt="">
+        <img src="/static/img/remen.png" alt="">
         热门放映
         <span class="layout_title_span">更多></span>
       </span>
@@ -15,7 +15,7 @@
             <div class="hot_info_ab">
               <span class="hot_tip">蜘蛛侠：平行宇宙</span>
               <span class="hot_score">2000人 在看
-                <img src="../../../static/img/fre_title.gif" alt="">
+                <img src="/static/img/fre_title.gif" alt="">
               </span>
             </div>
           </template>
@@ -24,7 +24,7 @@
     </div>
     <div class="modules">
       <span class="layout_title">
-        <img src="../../../static/img/yanzhi.png" alt="">
+        <img src="/static/img/yanzhi.png" alt="">
         颜值第一
         <span class="layout_title_span">更多></span>
       </span>
@@ -36,7 +36,7 @@
               <div class="modules_info_ab">
                 <span class="modules_score">
                   2000
-                  <img src="../../../static/img/fre_title.gif" alt="">
+                  <img src="/static/img/fre_title.gif" alt="">
                 </span>
               </div>
               <div class="modules_info_bottom modules_tip">
@@ -49,7 +49,7 @@
     </div>
     <div class="modules">
       <span class="layout_title">
-        <img src="../../../static/img/koubei.png" alt="">
+        <img src="/static/img/koubei.png" alt="">
         口碑大剧
         <span class="layout_title_span">更多></span>
       </span>
@@ -61,7 +61,7 @@
               <div class="modules_info_ab">
                 <span class="modules_score">
                   2000
-                  <img src="../../../static/img/fre_title.gif" alt="">
+                  <img src="/static/img/fre_title.gif" alt="">
 
                 </span>
               </div>
@@ -175,7 +175,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import '../../styles/home/cinema.scss';
+@import '~@/styles/home/index/cinema.scss';
 </style>
 <!-- 覆盖子组件样式 -->
 <style lang="scss" >

@@ -305,7 +305,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import '../../styles/home/special.scss';
+@import '~@/styles/home/index/special.scss';
 </style>
 <!-- 覆盖子组件样式 -->
 <style lang="scss" >
@@ -320,12 +320,12 @@ html {
       .van-sticky {
         & {
         }
-        height: 42px;
+        height: 1.1351rem;
       }
       .van-sticky--fixed {
-        top: 42px;
+        top: 1.1351rem;
         .van-tabs__wrap {
-          height: 100px;
+          height: 2.7027rem;
         }
       }
       .van-tabs__content {
@@ -369,12 +369,12 @@ html {
             align-content: center;
 
             .bar_title_one {
-              font-size: 16px;
+              font-size: 0.4324rem;
               color: #fff;
-              font-size: 18px;
+              font-size: 0.4865rem;
             }
             .bar_title_two {
-              font-size: 10px;
+              font-size: 0.2703rem;
               color: #999999;
             }
           }
@@ -389,10 +389,10 @@ html {
             color: #ffc53d !important;
           }
           .bar_title_two {
-            font-size: 10px;
+            font-size: 0.2703rem;
             color: #ffffff !important;
             background-color: #dd9c54;
-            border-radius: 20px;
+            border-radius: 0.5405rem;
           }
         }
       }

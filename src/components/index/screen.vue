@@ -98,7 +98,7 @@
         专区电影
       </span>
       <div>
-        <ul id="list">
+        <ul id="list" :style="{backgroundImage:'url('+require('../../../static/img/bg_harry.png')+')'}">
           <li class="item" v-for="(image, index) in special_img" :key="index" :class="index ==0 ? 'underl' : ''">
             <img v-lazy="image">
             <div class="special_info">
@@ -114,7 +114,7 @@
       </div>
     </div>
     <div class="poster">
-      <img src="../../../static/img/poster_1.png" alt="">
+      <img src="/static/img/poster_1.png" alt="">
     </div>
     <div class="new">
       <span class="layout_title">
@@ -378,7 +378,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import '../../styles/home/screen.scss';
+@import '~@/styles/home/index/screen.scss';
 </style>
 <!-- 覆盖子组件样式 -->
 <style lang="scss" >
@@ -396,7 +396,7 @@ export default {
 .rot {
   .carousel-3d-container {
     margin-top: 0;
-    margin-bottom: 10px;
+    margin-bottom: 0.2703rem;
   }
 }
 .navbar {
@@ -404,12 +404,12 @@ export default {
     .van-sticky {
       & {
       }
-      height: 42px;
+      height: 1.1351rem;
     }
     .van-sticky--fixed {
-      top: 42px;
+      top: 1.1351rem;
       .van-tabs__wrap {
-        height: 100px;
+        height: 2.7027rem;
       }
     }
   }
@@ -441,11 +441,11 @@ export default {
 
           .bar_title_one {
             color: #fff;
-            font-size: 18px;
+            font-size: 0.4865rem;
             padding-bottom: 5%;
           }
           .bar_title_two {
-            font-size: 10px;
+            font-size: 0.2703rem;
             color: #999999;
           }
         }
@@ -460,10 +460,10 @@ export default {
           color: #ffc53d !important;
         }
         .bar_title_two {
-          font-size: 10px;
+          font-size: 0.2703rem;
           color: #ffffff !important;
           background-color: #dd9c54;
-          border-radius: 20px;
+          border-radius: 0.5405rem;
         }
       }
     }
@@ -493,11 +493,11 @@ export default {
             width: 100%;
           }
           .flow_info_ab {
-            font-size: 12px;
+            font-size: 0.3243rem;
             width: 100%;
             display: flex;
             position: absolute;
-            bottom: 30px;
+            bottom: 0.8108rem;
 
             .flow_tip {
               color: #dddddd;
@@ -508,7 +508,7 @@ export default {
             }
           }
           .flow_title_name {
-            font-size: 14px;
+            font-size: 0.3784rem;
             color: #fff;
           }
         }

@@ -8,7 +8,7 @@
       </van-tab>
       <van-tab>
         <template #title>
-          <span :style="active===1?'color:#ffc53d;font-size:18px':'color:#999;font-size:16px'">
+          <span :style="active===1?'color:#ffc53d;font-size:0.4865rem':'color:#999;font-size:0.4324rem'">
             放映厅
           </span>
         </template>
@@ -20,7 +20,7 @@
       </van-tab>
       <van-tab>
         <template #title>
-          <span :style="active===2?'color:#ffc53d;font-size:18px':'color:#999;font-size:16px'">
+          <span :style="active===2?'color:#ffc53d;font-size:0.4865rem':'color:#999;font-size:0.4324rem'">
             推荐
           </span>
         </template>
@@ -32,7 +32,7 @@
       </van-tab>
       <van-tab>
         <template #title>
-          <span :style="active===3?'color:#ffc53d;font-size:18px':'color:#999;font-size:16px'">
+          <span :style="active===3?'color:#ffc53d;font-size:0.4865rem':'color:#999;font-size:0.4324rem'">
             专题
           </span>
         </template>
@@ -59,9 +59,12 @@
 import Vue from 'vue'
 import { Tab, Tabs } from 'vant'
 import { Toast } from 'vant'
-import screen from './screen'
-import cinema from './cinema'
-import special from './special'
+// import screen from './index/screen'
+// import cinema from './index/cinema'
+// import special from './index/special'
+import screen from '../../components/index/screen'
+import cinema from '../../components/index/cinema'
+import special from '../../components/index/special'
 
 Vue.use(Tab)
 Vue.use(Tabs)
@@ -92,5 +95,5 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import '../../styles/home/index.scss';
+@import '~@/styles/home/index.scss';
 </style>

@@ -1,7 +1,7 @@
 html {
   img {
     -webkit-mask-image: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0, rgba(255, 255, 255, .6) 0%, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 55%, rgba(255, 255, 255, .6) 85%, rgba(255, 255, 255, 0) 100%);
-    border-radius     : 10px 0px 10px 0px
+    border-radius     : 0.2703rem 0rem 0.2703rem 0rem
   }
 
   span {
@@ -16,7 +16,7 @@ html {
   }
 
   .layout_title {
-    font-size  : 16px;
+    font-size  : 0.4324rem;
     color      : #ffffff;
     padding    : 5% 4%;
     padding-top: 7.5%;
@@ -26,15 +26,15 @@ html {
     &:before {
       content         : "";
       display         : inline-flex;
-      width           : 0.18rem;
-      height          : 0.505rem;
+      width           : 6.66px;
+      height          : 18.685px;
       background-color: #ffc53d;
-      border-radius   : 21px;
+      border-radius   : 0.5676rem;
       margin-right    : 3.9%;
     }
 
     & span {
-      font-size  : 12px;
+      font-size  : 0.3243rem;
       color      : #999999;
       margin-left: auto;
     }
@@ -54,7 +54,7 @@ html {
     }
 
     .special_navbar {
-      height: 170px;
+      height: 4.5946rem;
 
       .special_eg_f {
 
@@ -72,19 +72,19 @@ html {
           }
 
           .underl {
-            margin-left: 0px !important;
+            margin-left: 0rem !important;
           }
 
           .item {
-            margin-left: 6px; //每个li设置间距为20px 
+            margin-left: 0.1622rem; //每个li设置间距为0.5405rem 
             display    : inline-block; //让所有的li在一行 注意这里不能用float:left 因为设置float后里超过一屏后会自动换行 
             width      : 45.87%;
             position   : relative;
 
             img {
               width        : 100%;
-              border-radius: 10px 0px 10px 0px;
-              height       : 109px;
+              border-radius: 0.2703rem 0rem 0.2703rem 0rem;
+              height       : 2.9459rem;
             }
 
             .lately_info {
@@ -113,7 +113,7 @@ html {
       .person {
         img {
           -webkit-mask-image: none;
-          border-radius     : 10px 0px 10px 0px;
+          border-radius     : 0.2703rem 0rem 0.2703rem 0rem;
         }
 
         #list {
@@ -129,11 +129,11 @@ html {
           }
 
           .underl {
-            margin-left: 0px !important;
+            margin-left: 0rem !important;
           }
 
           .item {
-            margin-left: 6px; //每个li设置间距为20px 
+            margin-left: 0.1622rem; //每个li设置间距为0.5405rem 
             display    : inline-block; //让所有的li在一行 注意这里不能用float:left 因为设置float后里超过一屏后会自动换行 
             width      : 28%;
             position   : relative;
@@ -141,7 +141,7 @@ html {
 
             img {
               width        : 100%;
-              border-radius: 10px 0px 10px 0px;
+              border-radius: 0.2703rem 0rem 0.2703rem 0rem;
             }
 
             .person_info {
@@ -154,7 +154,7 @@ html {
 
                 .person_tip {
                   width    : 100%;
-                  font-size: 12px;
+                  font-size: 0.3243rem;
                   color    : #cccccc;
                 }
 
@@ -169,9 +169,9 @@ html {
                 text-align: center;
 
                 .person_name {
-                  font-size     : 12px;
-                  line-height   : 19px;
-                  letter-spacing: 0px;
+                  font-size     : 0.3243rem;
+                  line-height   : 0.5135rem;
+                  letter-spacing: 0rem;
                   color         : #cccccc;
                 }
 
@@ -208,7 +208,7 @@ html {
           position   : absolute;
           bottom     : 2%;
           width      : 100%;
-          text-shadow: 0px 0px 2px #fff;
+          text-shadow: 0rem 0rem 0.0541rem #fff;
 
           .person_new_tip {
             padding-left: 4.2%;
@@ -226,7 +226,7 @@ html {
         .person_new_title_name {
           text-align    : left;
           padding-left  : 4%;
-          font-size     : 14px;
+          font-size     : 0.3784rem;
           color         : #fff;
           padding-bottom: 5%;
         }
@@ -234,7 +234,7 @@ html {
 
       .some_box {
         .some_ul {
-          height    : 420px;
+          height    : 11.3514rem;
           // display: flex;
           text-align: center;
 
@@ -265,10 +265,10 @@ html {
                 color        : #ffc53d;
 
                 img {
-                  padding-left      : 5px;
-                  width             : 14px;
+                  padding-left      : 0.1351rem;
+                  width             : 0.3784rem;
                   -webkit-mask-image: none;
-                  border-radius     : 0px
+                  border-radius     : 0rem
                 }
               }
 
@@ -278,9 +278,9 @@ html {
               text-align: left;
 
               .some_name {
-                // font-size   : 6px;
+                // font-size   : 0.1622rem;
                 padding-left : 4.2%;
-                font-size    : 14px;
+                font-size    : 0.3784rem;
                 color        : #fff;
                 overflow     : hidden;
                 white-space  : nowrap;
