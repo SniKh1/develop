@@ -2,6 +2,7 @@
  * 基础路由
  * @type { *[] }
  */
+
 export const constantRouterMap = [
   {
     path: '/',
@@ -16,7 +17,8 @@ export const constantRouterMap = [
         path: '/home',
         name: 'Home',
         component: () => import('@/views/home/home'),
-        meta: { title: '首页', keepAlive: false }
+        meta: { title: '首页', keepAlive: false },
+        children: []
       },
       {
         path: '/some',
@@ -37,5 +39,11 @@ export const constantRouterMap = [
         meta: { title: '关于我', keepAlive: false }
       }
     ]
+  },
+  {
+    path: '/more',
+    name: 'More',
+    component: () => import('../components/other/more.vue'),
+    meta: { title: '更多', keepAlive: false }
   }
 ]

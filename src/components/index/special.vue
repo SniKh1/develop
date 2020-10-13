@@ -32,7 +32,7 @@
             <div class="person">
               <span class="layout_title">
                 相关明星
-                <span class="layout_title_span">更多></span>
+                <span class="layout_title_span" @click="goMore">更多></span>
               </span>
               <div>
                 <ul id="list">
@@ -53,7 +53,7 @@
             <div class="person_new">
               <span class="layout_title">
                 高能明星周边
-                <span class="layout_title_span">更多></span>
+                <span class="layout_title_span" @click="goMore">更多></span>
               </span>
               <carousel-3d :loop="false" :startIndex="0" :inverseScaling="5" :space="120" :border="0" :perspective="0" :display="18"
                            :animationSpeed="1000" :width="120" :height="160">
@@ -72,7 +72,6 @@
             <div class="some">
               <span class="layout_title">
                 其他推荐
-                <span class="layout_title_span">更多></span>
               </span>
               <template>
                 <div class="some_box">
@@ -292,11 +291,15 @@ export default {
 
         // 数据全部加载完成
         if (this.list.length >= 2) {
-          // debugger
+          // 
           console.log(this.list)
           this.finished = true;
         }
       }, 1000);
+    },
+    goMore: function() {
+
+      this.$router.push("More")
     },
   },
   components: {

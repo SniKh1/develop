@@ -17,34 +17,35 @@ export default {
       currIndex: 0,
       active: 0,
       tabbars: [{
-        name: 'home',
+        name: 'Home',
         title: '首页',
         normal: require('../../static/img/home_active.png'),
         active: require('../../static/img/home_inactive.png')
       },
       {
         name: 'Some',
-        title: '首页',
+        title: '随心看',
         normal: require('../../static/img/some_active.png'),
         active: require('../../static/img/some_inactive.png')
       },
       {
         name: 'Lib',
-        title: '首页',
+        title: '片库',
         normal: require('../../static/img/lib_active.png'),
         active: require('../../static/img/lib_inactive.png')
       },
       {
         name: 'User',
-        title: '首页',
+        title: '我的',
         normal: require('../../static/img/user_active.png'),
         active: require('../../static/img/user_inactive.png')
-      }
+      },
       ]
     }
   },
   methods: {
     tab(index, val) {
+
       this.currIndex = index
       this.$router.push(val)
     }

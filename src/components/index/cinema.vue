@@ -3,9 +3,9 @@
   <div class="cinema-container">
     <div class="hot">
       <span class="layout_title">
-        <img src="/static/img/remen.png" alt="">
+        <img src="../../../static/img/remen.png" alt="">
         热门放映
-        <span class="layout_title_span">更多></span>
+        <span class="layout_title_span" @click="goMore">更多></span>
       </span>
       <carousel-3d :startIndex="5" :inverseScaling="10" :space="303" :border="0" :perspective="0" :display="5" :animationSpeed="1000" :width="284"
                    :height="167">
@@ -15,7 +15,7 @@
             <div class="hot_info_ab">
               <span class="hot_tip">蜘蛛侠：平行宇宙</span>
               <span class="hot_score">2000人 在看
-                <img src="/static/img/fre_title.gif" alt="">
+                <img src="../../../static/img/fre_title.gif" alt="">
               </span>
             </div>
           </template>
@@ -24,9 +24,9 @@
     </div>
     <div class="modules">
       <span class="layout_title">
-        <img src="/static/img/yanzhi.png" alt="">
+        <img src="../../../static/img/yanzhi.png" alt="">
         颜值第一
-        <span class="layout_title_span">更多></span>
+        <span class="layout_title_span" @click="goMore">更多></span>
       </span>
       <template>
         <div class="modules_box">
@@ -36,7 +36,7 @@
               <div class="modules_info_ab">
                 <span class="modules_score">
                   2000
-                  <img src="/static/img/fre_title.gif" alt="">
+                  <img src="../../../static/img/fre_title.gif" alt="">
                 </span>
               </div>
               <div class="modules_info_bottom modules_tip">
@@ -49,9 +49,9 @@
     </div>
     <div class="modules">
       <span class="layout_title">
-        <img src="/static/img/koubei.png" alt="">
+        <img src="../../../static/img/koubei.png" alt="">
         口碑大剧
-        <span class="layout_title_span">更多></span>
+        <span class="layout_title_span" @click="goMore">更多></span>
       </span>
       <template>
         <div class="modules_box">
@@ -61,7 +61,7 @@
               <div class="modules_info_ab">
                 <span class="modules_score">
                   2000
-                  <img src="/static/img/fre_title.gif" alt="">
+                  <img src="../../../static/img/fre_title.gif" alt="">
 
                 </span>
               </div>
@@ -100,62 +100,62 @@ export default {
     return {
       slides: [
         {
-          src: require('../../../static/img/banner_3.png'),
+          src: require('../../..../../../static/img/banner_3.png'),
         },
         {
-          src: require('../../../static/img/banner_3.png'),
+          src: require('../../..../../../static/img/banner_3.png'),
         },
         {
-          src: require('../../../static/img/banner_3.png'),
+          src: require('../../..../../../static/img/banner_3.png'),
         },
         {
-          src: require('../../../static/img/banner_3.png'),
+          src: require('../../..../../../static/img/banner_3.png'),
         },
         {
-          src: require('../../../static/img/banner_3.png'),
+          src: require('../../..../../../static/img/banner_3.png'),
         },
         {
-          src: require('../../../static/img/banner_3.png'),
+          src: require('../../..../../../static/img/banner_3.png'),
         },
       ],
       slides2: [
         {
-          src: require('../../../static/img/banner_2.png'),
+          src: require('../../..../../../static/img/banner_2.png'),
         },
         {
-          src: require('../../../static/img/banner_2.png'),
+          src: require('../../..../../../static/img/banner_2.png'),
         },
         {
-          src: require('../../../static/img/banner_2.png'),
+          src: require('../../..../../../static/img/banner_2.png'),
         },
         {
-          src: require('../../../static/img/banner_3.png'),
+          src: require('../../..../../../static/img/banner_3.png'),
         },
         {
-          src: require('../../../static/img/banner_3.png'),
+          src: require('../../..../../../static/img/banner_3.png'),
         },
         {
-          src: require('../../../static/img/banner_3.png'),
+          src: require('../../..../../../static/img/banner_3.png'),
         },
       ],
       slides3: [
         {
-          src: require('../../../static/img/bg_harry.png'),
+          src: require('../../..../../../static/img/bg_harry.png'),
         },
         {
-          src: require('../../../static/img/bg_harry.png'),
+          src: require('../../..../../../static/img/bg_harry.png'),
         },
         {
-          src: require('../../../static/img/bg_harry.png'),
+          src: require('../../..../../../static/img/bg_harry.png'),
         },
         {
-          src: require('../../../static/img/banner_3.png'),
+          src: require('../../..../../../static/img/banner_3.png'),
         },
         {
-          src: require('../../../static/img/banner_3.png'),
+          src: require('../../..../../../static/img/banner_3.png'),
         },
         {
-          src: require('../../../static/img/banner_3.png'),
+          src: require('../../..../../../static/img/banner_3.png'),
         },
       ],
     };
@@ -168,7 +168,12 @@ export default {
 
   },
 
-  methods: {},
+  methods: {
+    goMore: function() {
+
+      this.$router.push("More")
+    }
+  },
   components: {
   },
 }

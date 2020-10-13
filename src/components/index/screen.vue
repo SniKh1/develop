@@ -48,7 +48,7 @@
     <div class="rot">
       <span class="layout_title">
         大家都在追
-        <span class="layout_title_span">更多></span>
+        <span class="layout_title_span" @click="goMore">更多></span>
       </span>
       <carousel-3d :startIndex="5" :inverseScaling="10" :space="120" :border="0" :perspective="0" :display="5" :animationSpeed="1000" :width="120"
                    :height="160">
@@ -67,7 +67,7 @@
     <div class="drama">
       <span class="layout_title">
         口碑大剧等你追
-        <span class="layout_title_span">更多></span>
+        <span class="layout_title_span" @click="goMore">更多></span>
       </span>
       <div>
         <ul id="list">
@@ -119,7 +119,7 @@
     <div class="new">
       <span class="layout_title">
         高能新剧
-        <span class="layout_title_span">更多></span>
+        <span class="layout_title_span" @click="goMore">更多></span>
       </span>
       <carousel-3d :loop="false" :startIndex="0" :inverseScaling="5" :space="120" :border="0" :perspective="0" :display="18" :animationSpeed="1000"
                    :width="120" :height="160">
@@ -352,6 +352,10 @@ export default {
 
       this.mySwipeIndex = index;
     },
+    goMore: function() {
+
+      this.$router.push("More")
+    },
     onLoad() {
       // 异步更新数据
       // setTimeout 仅做示例，真实场景中一般为 ajax 请求
@@ -365,7 +369,7 @@ export default {
 
         // 数据全部加载完成
         if (this.list.length >= 2) {
-          // debugger
+          // 
           console.log(this.list)
           this.finished = true;
         }
