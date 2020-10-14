@@ -1,0 +1,38 @@
+html {
+  * {
+    color: #fff;
+  }
+
+  img {
+    width        : 100%;
+    border-radius: 10.0011px 0px 10.0011px 0px
+  }
+
+  .video-container {
+    .video_box {
+      width: 100%;
+
+      .video-js {
+        width: 100%;
+
+        //按钮
+        .vjs-big-play-button {
+          /* 中间大的播放按钮 */
+          font-size            : 2.5em;
+          line-height          : 2.3em;
+          height               : 60px;
+          width                : 60px;
+          -webkit-border-radius: 2.5em;
+          -moz-border-radius   : 2.5em;
+          border-radius        : 2.5em;
+          background-color     : rgba(115, 133, 159, .5);
+          border-width         : 0.12em;
+          margin-top           : -1.25em;
+          margin-left          : -1.75em;
+        }
+      }
+    }
+  }
+
+
+}

@@ -18,7 +18,11 @@ import '@/plugins/vant'
 import '@/assets/css/common.scss'
 // 移动端适配
 import 'lib-flexible/flexible.js'
-
+//引入videojs
+import VideoPlayer from 'vue-video-player'
+require('video.js/dist/video-js.css')
+require('vue-video-player/src/custom-theme.css')
+Vue.use(VideoPlayer)
 // filters
 import './filters'
 Vue.config.productionTip = false

@@ -1,7 +1,6 @@
 html {
   * {
-    background-color: #333;
-    color           : #fff;
+    color: #fff;
   }
 
   img {
@@ -36,14 +35,20 @@ html {
               width      : 66%;
 
               .video_info_name {
-                font-size: 0.4324rem;
-                color    : #ffffff;
+                font-size  : 0.4324rem;
+                color      : #ffffff;
+                display    : flex;
+                align-items: center;
 
                 .video_info_score {
                   color      : #ffc53d;
                   margin-left: 0.4054rem;
                 }
 
+                .coll_img {
+                  width      : 0.6486rem;
+                  margin-left: auto;
+                }
               }
 
               .video_info_center {

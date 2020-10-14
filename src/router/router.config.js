@@ -45,5 +45,11 @@ export const constantRouterMap = [
     name: 'More',
     component: () => import('../components/other/more.vue'),
     meta: { title: '更多', keepAlive: false }
+  },
+  {
+    path: '/video',
+    name: 'Video',
+    component: () => import('../components/video_play/video_action.vue'),
+    meta: { title: '视频播放', keepAlive: false }
   }
 ]
