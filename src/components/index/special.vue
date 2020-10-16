@@ -69,32 +69,33 @@
               </carousel-3d>
               <div class="person_new_title_name">蜘蛛侠：平行宇宙</div>
             </div>
-            <div class="some">
-              <span class="layout_title">
-                其他推荐
-              </span>
-              <template>
-                <div class="some_box">
-                  <ul class="some_ul">
-                    <li v-for="(item, i) in slides2">
-                      <img :src="item.src" alt="">
-                      <div class="some_info">
-                        <div class="some_info_ab">
-                          <span class="some_tip">更新至12集</span>
-                          <span class="some_score">9.8</span>
-                        </div>
-                        <div class="some_info_bt">
-                          <span class="some_name">毒液</span><br />
-                        </div>
-                      </div>
-                    </li>
-                  </ul>
-                </div>
-              </template>
-            </div>
+
           </template>
         </van-tab>
       </van-tabs>
+      <div class="some">
+        <span class="layout_title">
+          其他推荐
+        </span>
+        <template>
+          <div class="some_box">
+            <ul class="some_ul">
+              <li v-for="(item, i) in slides2">
+                <img :src="item.src" alt="">
+                <div class="some_info">
+                  <div class="some_info_ab">
+                    <span class="some_tip">更新至12集</span>
+                    <span class="some_score">9.8</span>
+                  </div>
+                  <div class="some_info_bt">
+                    <span class="some_name">毒液</span><br />
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </template>
+      </div>
     </div>
   </div>
 </template>

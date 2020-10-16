@@ -4,20 +4,38 @@
   <div class="video-container">
     <template>
       <div class="video_box">
-        <video id="my-video" class="video-js vjs-default-skin vjs-big-play-centered" controls preload="auto" width="500px">
+        <video id="my-video" class="video-js vjs-default-skin vjs-big-play-centered" controls autoplay='false' preload="auto">
           <source src="http://gt.shigemedia.com/vod/dianshiju/shendunjutegongdi2ji/tv/shendunjutegongdi2jidi1ji.mp4" type="application/x-mpegURL" />
         </video>
       </div>
       <!-- <button @click="checkVideo()">点击切换到CCTV3</button> -->
     </template>
+    <template>
+      <div class="video_info">
+        <van-tabs sticky line-width="40" line-height="4" color="#ffc53d" title-active-color="#ffc53d" background="#333" v-model="active">
+          <van-tab title="简介">
+            <div class="video_box">
+              <video_box :checkVideo="checkVideo"></video_box>
+            </div>
+          </van-tab>
+          <van-tab title="热评">热评</van-tab>
+        </van-tabs>
+      </div>
+    </template>
   </div>
 </template>
 
 <script>
+
 import Vue from 'vue'
 import videojs from "video.js";
 import "videojs-contrib-hls";
+import { Tab, Tabs } from 'vant';
 
+Vue.use(Tab);
+Vue.use(Tabs);
+
+import video_box from './video_info'
 
 export default {
   data() {
@@ -26,12 +44,19 @@ export default {
     }
   },
 
-  computed: {},
 
   mounted() {
+
     this.getVideo();
   },
+  beforeDestroy() {
+    // 组件销毁前销毁视频对象
+    var myPlayer = videojs("my-video");
+    myPlayer.dispose();
+  },
 
+  computed: {
+  },
   methods: {
     // getVideo() {
     //   videojs(
@@ -39,7 +64,7 @@ export default {
     //     {
     //       bigPlayButton: true,
     //       textTrackDisplay: false,
-    //       posterImage: true,
+    //       videoImage: true,
     //       errorDisplay: false,
     //       controlBar: true
     //     },
@@ -52,10 +77,10 @@ export default {
     getVideo() {
       videojs("my-video",
         {
-          controls: true, // 是否显示控制条
-          poster: 'xxx', // 视频封面图地址
-          preload: 'auto',
           autoplay: false,
+          controls: true, // 是否显示控制条
+          video: 'xxx', // 视频封面图地址
+          preload: 'auto',
           fluid: true, // 自适应宽高
           language: 'zh-CN', // 设置语言
           muted: false, // 是否静音
@@ -90,7 +115,7 @@ export default {
             {
               src: 'http://hwyvideo.shigemedia.com/ceshi/阴阳魔界第2季/vod/2a07280a476746e285e18faf59db0561/阴阳魔界第2季第1集_1_854X480_600_0.m3u8',
               type: 'application/x-mpegURL',
-              poster: '//vjs.zencdn.net/v/oceans.png'
+              video: '//vjs.zencdn.net/v/oceans.png'
             }
           ]
         },
@@ -115,8 +140,9 @@ export default {
   },
 
   components: {
+    'video_box': video_box
+  },
 
-  }
 }
 </script>
 
@@ -141,6 +167,15 @@ export default {
         border-width: 0.0676rem;
         margin-top: -0.8108rem;
         margin-left: -1.0811rem;
+      }
+    }
+  }
+  .video_info {
+    .van-tabs {
+      .van-sticky {
+        .van-tabs__wrap {
+          border-bottom: solid 1px #666666;
+        }
       }
     }
   }

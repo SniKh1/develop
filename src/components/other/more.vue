@@ -154,7 +154,7 @@ export default {
 <style lang="scss" >
 html {
   * {
-    background-color: #333;
+    // background-color: #333;
     color: #fff;
   }
   .more-container {
