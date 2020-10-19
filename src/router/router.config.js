@@ -53,10 +53,25 @@ export const constantRouterMap = [
     meta: { title: '视频播放', keepAlive: false },
     children: [
       {
-        path: '/home',
-        name: 'Home',
+        path: '/video',
+        name: 'Video_info',
         component: () => import('@/components/video_play/video_info'),
-        meta: { title: '首页', keepAlive: false },
+        meta: { title: '视频信息', keepAlive: false },
+        children: [
+          {
+            path: '/video',
+            name: 'Video_comment',
+            component: () => import('@/components/video_play/video_comment'),
+            meta: { title: '视频信息', keepAlive: false },
+            children: []
+          }
+        ]
+      },
+      {
+        path: '/video',
+        name: 'Person_info',
+        component: () => import('@/components/video_play/person_info'),
+        meta: { title: '演员信息', keepAlive: false },
         children: []
       }
     ]

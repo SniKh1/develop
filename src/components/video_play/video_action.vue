@@ -3,44 +3,44 @@
 <template>
   <div class="video-container">
     <template>
-      <div class="video_box">
-        <video id="my-video" class="video-js vjs-default-skin vjs-big-play-centered" controls autoplay='false' preload="auto">
-          <source src="http://gt.shigemedia.com/vod/dianshiju/shendunjutegongdi2ji/tv/shendunjutegongdi2jidi1ji.mp4" type="application/x-mpegURL" />
-        </video>
-      </div>
-      <!-- <button @click="checkVideo()">点击切换到CCTV3</button> -->
-    </template>
-    <template>
-      <div class="video_info">
-        <van-tabs sticky line-width="40" line-height="4" color="#ffc53d" title-active-color="#ffc53d" background="#333" v-model="active">
-          <van-tab title="简介">
-            <div class="video_box">
-              <video_box :checkVideo="checkVideo"></video_box>
-            </div>
-          </van-tab>
-          <van-tab title="热评">热评</van-tab>
-        </van-tabs>
-      </div>
+      <van-sticky>
+        <div class="video_box">
+          <video id="my-video" class="video-js vjs-default-skin vjs-big-play-centered" controls autoplay='false' preload="auto">
+            <source src="http://gt.shigemedia.com/vod/dianshiju/shendunjutegongdi2ji/tv/shendunjutegongdi2jidi1ji.mp4" type="application/x-mpegURL" />
+          </video>
+        </div>
+      </van-sticky>
+      <template>
+        <div>
+          <transition name="van-fade">
+            <div :menuChange="menuChange" :is="currentView"></div>
+          </transition>
+        </div>
+      </template>
     </template>
   </div>
 </template>
 
 <script>
 
+
 import Vue from 'vue'
 import videojs from "video.js";
 import "videojs-contrib-hls";
 import { Tab, Tabs } from 'vant';
+import { Sticky } from 'vant';
 
+Vue.use(Sticky);
 Vue.use(Tab);
 Vue.use(Tabs);
 
 import video_box from './video_info'
+import person_box from './person_info'
 
 export default {
   data() {
     return {
-      active: 2
+      currentView: "video_box"
     }
   },
 
@@ -126,21 +126,16 @@ export default {
         }
       );
     },
-    checkVideo() {
-      var myPlayer = videojs("my-video");
-      myPlayer.src([
-        {
-          type: "application/x-mpegURL",
-          src: "http://ivi.bupt.edu.cn/hls/cctv3hd.m3u8" //CCTV3频道
-        }
-      ]);
-      myPlayer.play();
-    }
+    menuChange(menu) {
 
+      this.currentView = menu;
+      console.log(this.currentView)
+    }
   },
 
   components: {
-    'video_box': video_box
+    'video_box': video_box,
+    'person_box': person_box
   },
 
 }

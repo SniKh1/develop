@@ -1,128 +1,149 @@
 <template>
   <div class="video-info-container">
-    <template>
-      <div class="video_info_box">
-        <div class="video_info_header">
-          <div class="vip_bt_box">
-            <van-button round type="info" @click="childMethod">
-              立即开通会员
-            </van-button>
-          </div>
-        </div>
-        <div class="video_info_body">
-          <div class="top">
-            <span class="video_info_name">哈利·波特与魔法石</span>
-            <span class="video_info_score">8.6</span>
-            <div class="share"><img src="../../../static/img/share_b.png" @click="showShare = true" alt=""><img src="../../../static/img/coll_q.png"
-                   alt=""></div>
-            <van-share-sheet v-model="showShare" title="立即分享给好友" :options="options" />
-          </div>
-          <div class="content">
-            <span class="">类型：<span class="type">奇幻 / 冒险</span></span>
-          </div>
-          <div class="bottom">
-            <van-collapse v-model="activeNames" :border="false">
-              <van-collapse-item title="哈利波特是一个孤儿，从小寄养在姨妈家， 受尽欺凌但就在哈利11岁" name="2" :border="false">
-                哈利波特是一个孤儿，从小寄养在姨妈家， 受尽欺凌但就在哈利11岁哈利波特是一个孤儿，从小寄养在姨妈家， 受尽欺凌但就在哈利11岁
-              </van-collapse-item>
-            </van-collapse>
-          </div>
-        </div>
-        <div class="video_info_footer">
-          <van-tabs class="" color="#333" offset-top='44'>
-            <van-tab class="" v-for="(bar_title, index) in navbar" :key="index">
-              <template #title>
-                <div class="tab_bar" :class="index == 0 ? 'active_bar' : 'active_bar2'">
-                  <span class="bar_title_one">{{bar_title}}</span>
-                </div>
-                <div class="line">{{index == navbar.length-1 ?  "":"/" }}</div>
-              </template>
-              <template>
-                <div class="drama">
-                  <span class="layout_title drama_title">
-                    选集
-                  </span>
-                  <ul id="list">
-                    <li class="item" v-for="(item, index) in drama" :key="index" :class="activeClass == index?'active_check':''">
-                      <div class="item_box" @click="IsActive(index)"><span>{{item}}</span></div>
-                    </li>
-                  </ul>
-                </div>
-                <div class="lately">
-                  <span class="layout_title">
-                    相关资讯
-                  </span>
-                  <div>
-                    <ul id="list">
-                      <li class="item" v-for="(image, index) in lately_img" :key="index" :class="index ==0 ? 'underl' : ''">
-                        <img v-lazy="image">
-                        <div class="lately_info">
-                          <div class="lately_info_ab">
-                            <span class="lately_tip">更新至12集</span>
-                            <span class="lately_score">9.8</span>
-                          </div>
-                          <div class="lately_info_bt">
-                            <span class="lately_name">蜘蛛侠：平行宇宙</span><br />
-
-                          </div>
-                        </div>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-                <div class="person">
-                  <span class="layout_title">
-                    相关明星
-                    <span class="layout_title_span" @click="goMore">更多></span>
-                  </span>
-                  <div>
-                    <ul id="list">
-                      <li class="item" v-for="(image, index) in person_img" :key="index" :class="index ==0 ? 'underl' : ''">
-                        <img v-lazy="image">
-                        <div class="person_info">
-                          <div class="person_info_ab">
-                            <span class="person_tip">艾玛·沃森</span>
-                          </div>
-                          <div class="person_info_bt">
-                            <span class="person_name">Emma Watson</span><br />
-                          </div>
-                        </div>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </template>
-            </van-tab>
-          </van-tabs>
-
-        </div>
-        <div class="more_reco">
-          <span class="layout_title">
-            更多推荐
-          </span>
-          <template>
-            <div class="more_reco_box">
-              <ul class="more_reco_ul">
-                <li v-for="(item, i) in slides2">
-                  <div class="img_box">
-                    <img :src="item.src" alt="">
-                  </div>
-                  <div class="more_reco_info">
-                    <div class="more_reco_info_ab">
-                      <span class="more_reco_tip">更新至12集</span>
-                      <span class="more_reco_score">9.8</span>
-                    </div>
-                    <div class="more_reco_info_bt">
-                      <span class="more_reco_name">毒液</span><br />
+    <div class="video_info">
+      <van-tabs sticky line-width="40" line-height="4" color="#ffc53d" title-active-color="#ffc53d" background="#333" v-model="active" z-index="98"
+                offset-top="211px">
+        <van-tab title="简介">
+          <div class="video_box">
+            <template>
+              <!-- 简介主体内容 -->
+              <div class="video_info_box">
+                <template>
+                  <div class="video_info_header">
+                    <div class="vip_bt_box">
+                      <van-button round type="info" @click="checkVideo">
+                        立即开通会员
+                      </van-button>
                     </div>
                   </div>
-                </li>
-              </ul>
-            </div>
-          </template>
-        </div>
-      </div>
-    </template>
+                </template>
+                <template>
+                  <div class="video_info_body">
+                    <div class="top">
+                      <span class="video_info_name">哈利·波特与魔法石</span>
+                      <span class="video_info_score">8.6</span>
+                      <div class="share"><img src="../../../static/img/share_b.png" @click="showShare = true" alt=""><img
+                             src="../../../static/img/coll_q.png" alt=""></div>
+                      <van-share-sheet v-model="showShare" title="立即分享给好友" :options="options" />
+                    </div>
+                    <div class="content">
+                      <span class="">类型：<span class="type">奇幻 / 冒险</span></span>
+                    </div>
+                    <div class="bottom">
+                      <van-collapse v-model="activeNames" :border="false">
+                        <van-collapse-item title="哈利波特是一个孤儿，从小寄养在姨妈家， 受尽欺凌但就在哈利11岁" name="2" :border="false">
+                          哈利波特是一个孤儿，从小寄养在姨妈家， 受尽欺凌但就在哈利11岁哈利波特是一个孤儿，从小寄养在姨妈家， 受尽欺凌但就在哈利11岁
+                        </van-collapse-item>
+                      </van-collapse>
+                    </div>
+                  </div>
+                </template>
+                <template>
+                  <div class="video_info_footer">
+                    <van-tabs class="" color="#333" offset-top='44'>
+                      <van-tab class="" v-for="(bar_title, index) in navbar" :key="index">
+                        <template #title>
+                          <div class="tab_bar" :class="index == 0 ? 'active_bar' : 'active_bar2'">
+                            <span class="bar_title_one">{{bar_title}}</span>
+                          </div>
+                          <div class="line">{{index == navbar.length-1 ?  "":"/" }}</div>
+                        </template>
+                        <template>
+                          <div class="drama">
+                            <span class="layout_title drama_title">
+                              选集
+                            </span>
+                            <ul id="list">
+                              <li class="item" v-for="(item, index) in drama" :key="index" :class="activeClass == index?'active_check':''">
+                                <div class="item_box" @click="IsActive(index)"><span>{{item}}</span></div>
+                              </li>
+                            </ul>
+                          </div>
+                          <div class="lately">
+                            <span class="layout_title">
+                              相关资讯
+                            </span>
+                            <div>
+                              <ul id="list">
+                                <li class="item" v-for="(image, index) in lately_img" :key="index" :class="index ==0 ? 'underl' : ''">
+                                  <img v-lazy="image">
+                                  <div class="lately_info">
+                                    <div class="lately_info_ab">
+                                      <span class="lately_tip">更新至12集</span>
+                                      <span class="lately_score">9.8</span>
+                                    </div>
+                                    <div class="lately_info_bt">
+                                      <span class="lately_name">蜘蛛侠：平行宇宙</span><br />
+
+                                    </div>
+                                  </div>
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+                          <div class="person">
+                            <span class="layout_title">
+                              相关明星
+                              <span class="layout_title_span" @click="goMore">更多></span>
+                            </span>
+                            <div>
+                              <ul id="list">
+                                <li class="item" @click="goPerson" v-for="(image, index) in person_img" :key="index"
+                                    :class="index ==0 ? 'underl' : ''">
+                                  <img v-lazy="image">
+                                  <div class="person_info">
+                                    <div class="person_info_ab">
+                                      <span class="person_tip">艾玛·沃森</span>
+                                    </div>
+                                    <div class="person_info_bt">
+                                      <span class="person_name">Emma Watson</span><br />
+                                    </div>
+                                  </div>
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+                        </template>
+                      </van-tab>
+                    </van-tabs>
+
+                  </div>
+                </template>
+                <template>
+                  <div class="more_reco">
+                    <span class="layout_title">
+                      更多推荐
+                    </span>
+                    <template>
+                      <div class="more_reco_box">
+                        <ul class="more_reco_ul">
+                          <li v-for="(item, i) in slides2" :class="(1+i) %   3==0  ? 'img_right_box' : 'img_left_box'">
+                            <div class="img_box" :class="(2+i) %   3==0  ? 'img_center' : ''">
+                              <img :src="item.src" alt="">
+                              <div class="more_reco_info_ab">
+                                <span class="more_reco_tip">更新至12集</span>
+                                <span class="more_reco_score">9.8</span>
+                              </div>
+                              <div class="more_reco_info_bt">
+                                <span class="more_reco_name">毒液</span><br />
+                              </div>
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                    </template>
+                  </div>
+                </template>
+              </div>
+            </template>
+          </div>
+        </van-tab>
+        <van-tab title="热评">
+          <video_comment></video_comment>
+        </van-tab>
+      </van-tabs>
+    </div>
+
   </div>
 </template>
 
@@ -133,6 +154,10 @@ import { Lazyload } from 'vant';
 import { Image as VanImage } from 'vant';
 import { Tab, Tabs } from 'vant';
 import { ShareSheet } from 'vant';
+// videojs引用
+import videojs from "video.js";
+import "videojs-contrib-hls";
+import video_comment from './video_comment'
 
 Vue.use(ShareSheet);
 Vue.use(Tab);
@@ -146,6 +171,7 @@ Vue.use(CollapseItem);
 export default {
   data() {
     return {
+      active: 2,
       activeClass: 0,
       loading: false,
       finished: false,
@@ -314,18 +340,20 @@ export default {
 
   mounted() { },
   props: {
-    checkVideo: {
+    //父组件切换明星详情方法 注册
+    menuChange: {
       type: Function,
       default: null
     }
   },
   methods: {
-    //分享面板
-    onSelect(option) {
-      Toast(option.name);
-      this.showShare = false;
+    //跳转明星页父组件方法调用
+    goPerson() {
+      if (this.menuChange) {
+        this.menuChange("person_box");
+      }
     },
-    //更多
+    //跳转更多
     goMore: function() {
       this.$router.push("More")
     },
@@ -333,17 +361,26 @@ export default {
     IsActive(k) {
       this.activeClass = k;
     },
-    //父组件方法调用
-    childMethod() {
-
-      if (this.checkVideo) {
-        this.checkVideo();
-      }
+    //分享面板
+    onSelect(option) {
+      Toast(option.name);
+      this.showShare = false;
+    },
+    //切换视频源
+    checkVideo() {
+      var myPlayer = videojs("my-video");
+      myPlayer.src([
+        {
+          type: "application/x-mpegURL",
+          src: "http://ivi.bupt.edu.cn/hls/cctv3hd.m3u8" //CCTV3频道
+        }
+      ]);
+      myPlayer.play();
     }
   },
 
   components: {
-
+    'video_comment': video_comment
   }
 }
 </script>

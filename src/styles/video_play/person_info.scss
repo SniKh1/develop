@@ -1,0 +1,183 @@
+.layout_title {
+  font-size  : 0.4324rem;
+  color      : #ffffff;
+  padding    : 5% 0;
+  padding-top: 7.5%;
+  display    : flex;
+  align-items: center;
+
+  &:before {
+    content         : "";
+    display         : inline-flex;
+    width           : 0.18rem;
+    height          : 0.505rem;
+    background-color: #ffc53d;
+    border-radius   : 0.5676rem;
+    margin-right    : 3.9%;
+  }
+
+  & span {
+    font-size  : 0.3243rem;
+    color      : #999999;
+    margin-left: auto;
+  }
+}
+
+.person-container {
+  .container {
+    padding    : 0 0.5405rem;
+    padding-top: 1.3514rem;
+
+    .person_box {
+      display    : flex;
+      align-items: center;
+
+      .person_img {
+        width: 1.6216rem;
+      }
+
+      .person_info {
+        padding-left: 0.4054rem;
+
+        .person_info_ab {
+          padding-bottom: 0.1892rem;
+        }
+      }
+    }
+
+    .drama {
+
+
+      #list {
+        overflow-x : auto; //设置x轴可滑动 
+        overflow-y : hidden; //设置x轴可滑动 
+        list-style : none; //去掉li上的小点 
+        white-space: nowrap; //元素不换行 
+        width      : auto; //(宽度) 
+
+        &::-webkit-scrollbar {
+          width: 0;
+        }
+
+        .underl {
+          margin-left: 0rem !important;
+        }
+
+        .item {
+          margin-left: 0.1622rem; //每个li设置间距为0.5405rem 
+          display    : inline-block; //让所有的li在一行 注意这里不能用float:left 因为设置float后里超过一屏后会自动换行 
+          width      : 28%;
+          position   : relative;
+
+          img {
+            width        : 100%;
+            border-radius: 0.2703rem 0rem 0.2703rem 0rem;
+          }
+
+          .drama_info {
+            .drama_info_ab {
+              color   : #ffff;
+              display : flex;
+              position: absolute;
+              bottom  : 15%;
+              width   : 100%;
+
+              .drama_tip {
+                padding-left: 4.2%;
+                width       : 100%;
+              }
+
+              .drama_score {
+                padding-right: 4.2%;
+                margin-left  : auto;
+                color        : #ffc53d
+              }
+            }
+
+            .drama_info_bt {
+              .drama_name {
+                font-size     : 0.3784rem;
+                line-height   : 0.5135rem;
+                letter-spacing: 0rem;
+                color         : #ffffff;
+              }
+
+
+            }
+
+          }
+        }
+
+      }
+
+    }
+
+    .movie {
+
+
+      #list {
+        overflow-x : auto; //设置x轴可滑动 
+        overflow-y : hidden; //设置x轴可滑动 
+        list-style : none; //去掉li上的小点 
+        white-space: nowrap; //元素不换行 
+        width      : auto; //(宽度) 
+
+        &::-webkit-scrollbar {
+          width: 0;
+        }
+
+        .underl {
+          margin-left: 0rem !important;
+        }
+
+        .item {
+          margin-left: 0.1622rem; //每个li设置间距为0.5405rem 
+          display    : inline-block; //让所有的li在一行 注意这里不能用float:left 因为设置float后里超过一屏后会自动换行 
+          width      : 28%;
+          position   : relative;
+
+          img {
+            width        : 100%;
+            border-radius: 0.2703rem 0rem 0.2703rem 0rem;
+          }
+
+          .movie_info {
+            .movie_info_ab {
+              color   : #ffff;
+              display : flex;
+              position: absolute;
+              bottom  : 15%;
+              width   : 100%;
+
+              .movie_tip {
+                padding-left: 4.2%;
+                width       : 100%;
+              }
+
+              .movie_score {
+                padding-right: 4.2%;
+                margin-left  : auto;
+                color        : #ffc53d
+              }
+            }
+
+            .movie_info_bt {
+              .movie_name {
+                font-size     : 0.3784rem;
+                line-height   : 0.5135rem;
+                letter-spacing: 0rem;
+                color         : #ffffff;
+              }
+
+
+            }
+
+          }
+        }
+
+      }
+
+    }
+  }
+
+}

@@ -190,7 +190,7 @@ html {
             list-style : none; //去掉li上的小点 
             white-space: nowrap; //元素不换行 
             width      : auto; //(宽度) 
-            height     : 123px;
+            height     : 3.3243rem;
             display    : flex;
 
             &::-webkit-scrollbar {
@@ -285,7 +285,7 @@ html {
               width      : 2.1081rem;
               position   : relative;
               padding    : 0 3%;
-              padding-top: 8px;
+              padding-top: 0.2162rem;
 
               img {
                 width        : 100%;
@@ -336,7 +336,7 @@ html {
 
       .more_reco {
         .layout_title {
-          padding-top: 10px;
+          padding-top: 0.2703rem;
         }
 
         .more_reco_box {
@@ -350,12 +350,15 @@ html {
 
               .img_box {
                 text-align: left;
+                padding   : 0 0.1757rem;
 
                 img {
-                  width : 90%;
+                  // width : 90%;
                   margin: auto;
                 }
               }
+
+
 
               .more_reco_info_ab {
                 white-space: nowrap;
@@ -363,12 +366,12 @@ html {
                 position   : absolute;
                 bottom     : 20%;
                 width      : 96%;
-                padding    : 0 3px;
+                padding    : 0 0.0811rem;
                 line-height: 0;
 
                 .more_reco_tip {
                   color    : #fff !important;
-                  font-size: 12px;
+                  font-size: 0.3243rem;
 
                 }
 
@@ -398,6 +401,22 @@ html {
                   white-space  : nowrap;
                   text-overflow: ellipsis;
                 }
+              }
+            }
+
+            .img_left_box {
+              .img_box {
+                padding-left: 0rem;
+              }
+
+              .img_center {
+                padding: 0 0.0878rem;
+              }
+            }
+
+            .img_right_box {
+              .img_box {
+                padding-right: 0rem;
               }
             }
           }
