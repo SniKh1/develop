@@ -1,8 +1,8 @@
 {
   "name": "develop",
-  "version": "2.1.0",
+  "version": "0.1.0",
   "description": "A vue h5 template with Vant UI",
-  "author": "Sunnie <sunniejs@163.com>",
+  "author": "SniKh1 <1224074384@qq.com>",
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve --open",
@@ -40,12 +40,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/sunniejs/develop.git"
+    "url": "git+https://github.com/SniKh1/develop.git"
   },
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/sunniejs/develop/issues"
+    "url": "https://github.com/SniKh1/develop/issues"
   },
-  "homepage": "https://github.com/sunniejs/develop#readme",
+  "homepage": "https://github.com/SniKh1/develop/develop#readme",
   "main": ".postcssrc.js"
 }
