@@ -24,19 +24,19 @@ export const constantRouterMap = [
         path: '/some',
         name: 'Some',
         component: () => import('@/components/other/more'),
-        meta: { title: '关于我', keepAlive: false }
+        meta: { title: '随心看', keepAlive: false }
       },
       {
         path: '/lib',
         name: 'Lib',
-        component: () => import('@/components/video_play/video_action'),
-        meta: { title: '首页', keepAlive: true }
+        component: () => import('@/views/chip_library/chip_library'),
+        meta: { title: '片库', keepAlive: true }
       },
       {
         path: '/user',
         name: 'User',
         component: () => import('@/views/home/home'),
-        meta: { title: '关于我', keepAlive: true }
+        meta: { title: '我的', keepAlive: true }
       }
     ]
   },
