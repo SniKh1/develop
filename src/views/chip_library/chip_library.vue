@@ -1,29 +1,37 @@
+<!-- home -->
 
 <template>
-  <div class="chiplibrary-container">
+  <div class="video-container">
 
   </div>
 </template>
 
 <script>
 
-import Vue from 'vue';
 
+import Vue from 'vue'
 
 export default {
-  props: [],
-  data() { },
-  created() { },
-  computed: {},
+  data() {
+    return {
+    }
+  },
+
+
   mounted() { },
+  beforeDestroy() { },
+
+  computed: {
+  },
   methods: {},
+
   components: {},
+
 }
 </script>
 
 <style lang="scss" scoped>
 @import '~@/styles/chip_library/chip_library.scss';
 </style>
-<!-- 覆盖子组件样式 -->
-<style lang="scss" >
+<style lang="scss">
 </style>
