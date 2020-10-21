@@ -11,19 +11,19 @@
     </div>
     <div class="label">
       <van-tabs :line-height="0">
-        <van-tab v-for="label in lables1" :title="label.name"></van-tab>
+        <van-tab v-for="label in lables1" :key="label.name" :title="label.name"></van-tab>
       </van-tabs>
       <van-tabs :line-height="0">
-        <van-tab v-for="label in lables2" :title="label.name"></van-tab>
+        <van-tab v-for="label in lables2" :key="label.name" :title="label.name"></van-tab>
       </van-tabs>
       <van-tabs :line-height="0">
-        <van-tab v-for="label in lables3" :title="label.name"></van-tab>
+        <van-tab v-for="label in lables3" :key="label.name" :title="label.name"></van-tab>
       </van-tabs>
       <van-tabs :line-height="0">
-        <van-tab v-for="label in lables4" :title="label.name"></van-tab>
+        <van-tab v-for="label in lables4" :key="label.name" :title="label.name"></van-tab>
       </van-tabs>
       <van-tabs :line-height="0">
-        <van-tab v-for="label in lables5" :title="label.name"></van-tab>
+        <van-tab v-for="label in lables5" :key="label.name" :title="label.name"></van-tab>
       </van-tabs>
     </div>
   </div>
@@ -56,7 +56,7 @@ export default {
       ]
       ,
       lables4: [
-        { name: "全部" }, { name: "2020" }, { name: "2019" }, { name: "2018" }, { name: "2017" }, { name: "2016" }, { name: "2016" }, { name: "2016" }, { name: "2016" }
+        { name: "全部" }, { name: "2020" }, { name: "2019" }, { name: "2018" }, { name: "2017" }, { name: "2016" }, { name: "2015" }, { name: "2014" }, { name: "2013" }
       ]
       ,
       lables5: [
