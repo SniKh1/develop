@@ -1,28 +1,16 @@
 
 <template>
-  <div class="more-container">
+  <div class="record-container">
     <template>
-      <van-nav-bar title="热门放映"" left-text="" right-text="" left-arrow @click-left=" onClickLeft" fixed :border='false' />
+      <van-nav-bar title="观看记录"" left-text="" right-text=" 编辑" left-arrow @click-left=" onClickLeft" @click-right=" onClickRight" fixed
+                   :border='false' />
     </template>
     <template>
-      <div class="more_box">
+      <div class="record_box">
         <ul>
           <li v-for="(item, i) in list" :key="i">
-            <div class="video_box">
-              <div class="poster_box">
-                <img :src="item.img" alt="" @click="goVideo">
-              </div>
-              <div class="video_info_box">
-                <div class="video_info_name">{{item.name}}<span class="video_info_score">{{item.score}}</span>
-                  <img class="coll_img" :src="item.img_coll" alt="">
-                </div>
-                <div class="video_info_center">类型：<span class="video_info_type">{{item.type}}</span><span class="video_info_sets">{{item.sets}}</span>
-                </div>
-                <div class="video_info_bt"><span class="video_info_desc">{{item.desc}}</span></div>
-              </div>
-            </div>
-          </li>
 
+          </li>
         </ul>
       </div>
     </template>
@@ -148,9 +136,10 @@ export default {
     onClickLeft: function() {
       this.$router.go(-1)
     },
-    goVideo: function() {
-      this.$router.push("Video")
+    onClickRight: function() {
+      this.$router.go(-1)
     },
+
   },
   components: {
   },
@@ -158,7 +147,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import '~@/styles/other/more.scss';
+@import '~@/styles/user/record.scss';
 </style>
 <!-- 覆盖子组件样式 -->
 <style lang="scss" >
@@ -167,13 +156,19 @@ html {
     // background-color: #333;
     color: #fff;
   }
-  .more-container {
+  .record-container {
     .van-nav-bar {
       background-color: #333;
       .van-nav-bar__left {
         .van-icon {
           color: #fff;
           font-size: 0.5405rem;
+        }
+      }
+      .van-nav-bar__right {
+        .van-nav-bar__text {
+          color: #fff;
+          font-size: 0.4324rem;
         }
       }
       .van-nav-bar__title {

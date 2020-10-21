@@ -36,7 +36,8 @@ export const constantRouterMap = [
         path: '/user',
         name: 'User',
         component: () => import('@/components/user/user'),
-        meta: { title: '我的', keepAlive: true }
+        meta: { title: '我的', keepAlive: true },
+        children: []
       }
     ]
   },
@@ -51,6 +52,18 @@ export const constantRouterMap = [
     name: 'Search',
     component: () => import('@/components/other/search'),
     meta: { title: '更多', keepAlive: true }
+  },
+  {
+    path: '/record',
+    name: 'Record',
+    component: () => import('@/components/user/record'),
+    meta: { title: '观看记录', keepAlive: true }
+  },
+  {
+    path: '/collection',
+    name: 'Collection',
+    component: () => import('@/components/user/collection'),
+    meta: { title: '收藏记录', keepAlive: true }
   },
   {
     path: '/video',
