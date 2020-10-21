@@ -20,7 +20,7 @@
             <div class="special_eg_f">
               <ul id="list">
                 <li class="item" v-for="(image, index) in lately_img" :key="index" :class="index ==0 ? 'underl' : ''">
-                  <img v-lazy="image">
+                  <img v-lazy="image" @click="goVideo">
                   <div class="lately_info">
                     <div class="lately_info_ab">
                       <span class="lately_tip">第一季</span>
@@ -37,7 +37,7 @@
               <div>
                 <ul id="list">
                   <li class="item" v-for="(image, index) in person_img" :key="index" :class="index ==0 ? 'underl' : ''">
-                    <img v-lazy="image">
+                    <img v-lazy="image" @click="goVideo">
                     <div class="person_info">
                       <div class="person_info_ab">
                         <span class="person_tip">艾玛·沃森</span>
@@ -81,7 +81,7 @@
           <div class="some_box">
             <ul class="some_ul">
               <li v-for="(item, i) in slides2">
-                <img :src="item.src" alt="">
+                <img :src="item.src" alt="" @click="goVideo">
                 <div class="some_info">
                   <div class="some_info_ab">
                     <span class="some_tip">更新至12集</span>
@@ -299,8 +299,10 @@ export default {
       }, 1000);
     },
     goMore: function() {
-
       this.$router.push("More")
+    },
+    goVideo: function() {
+      this.$router.push("Video")
     },
   },
   components: {

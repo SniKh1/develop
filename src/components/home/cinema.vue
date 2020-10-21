@@ -5,7 +5,7 @@
       <span class="layout_title">
         <img src="../../../static/img/remen.png" alt="">
         热门放映
-        <span class="layout_title_span" @click="goVideo">更多></span>
+        <span class="layout_title_span" @click="goMore">更多></span>
       </span>
       <carousel-3d :startIndex="5" :inverseScaling="10" :space="303" :border="0" :perspective="0" :display="5" :animationSpeed="1000" :width="284"
                    :height="167">
@@ -26,13 +26,13 @@
       <span class="layout_title">
         <img src="../../../static/img/yanzhi.png" alt="">
         颜值第一
-        <span class="layout_title_span" @click="goVideo">更多></span>
+        <span class="layout_title_span" @click="goMore">更多></span>
       </span>
       <template>
         <div class="modules_box">
           <ul class="modules_ul">
             <li v-for="(item, i) in slides3">
-              <img :src="item.src" alt="">
+              <img :src="item.src" alt="" @click="goVideo">
               <div class="modules_info_ab">
                 <span class="modules_score">
                   2000
@@ -51,13 +51,13 @@
       <span class="layout_title">
         <img src="../../../static/img/koubei.png" alt="">
         口碑大剧
-        <span class="layout_title_span" @click="goVideo">更多></span>
+        <span class="layout_title_span" @click="goMore">更多></span>
       </span>
       <template>
         <div class="modules_box">
           <ul class="modules_ul">
             <li v-for="(item, i) in slides2">
-              <img :src="item.src" alt="">
+              <img :src="item.src" alt="" @click="goVideo">
               <div class="modules_info_ab">
                 <span class="modules_score">
                   2000

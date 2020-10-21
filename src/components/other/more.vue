@@ -10,7 +10,7 @@
           <li v-for="(item, i) in list" :key="i">
             <div class="video_box">
               <div class="poster_box">
-                <img :src="item.img" alt="">
+                <img :src="item.img" alt="" @click="goVideo">
               </div>
               <div class="video_info_box">
                 <div class="video_info_name">{{item.name}}<span class="video_info_score">{{item.score}}</span>
@@ -140,7 +140,10 @@ export default {
   methods: {
     onClickLeft: function() {
       this.$router.go(-1)
-    }
+    },
+    goVideo: function() {
+      this.$router.push("Video")
+    },
   },
   components: {
   },

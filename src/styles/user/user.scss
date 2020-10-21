@@ -1,0 +1,113 @@
+html {
+  span {
+    color: #ffffff;
+  }
+
+  p {
+    color: #ffffff;
+  }
+}
+
+.user-container {
+  // padding-left: 0.4324rem;
+
+  .user_header {
+    // padding-left   : 0.4324rem;
+    background     : url('../../../static/img/vip.png')no-repeat;
+    background-size: 100%;
+    height         : 16.2162rem;
+    padding-bottom : 0.1892rem;
+
+    .header_top {
+      padding       : 0 0.7027rem;
+      padding-top   : 0.3243rem;
+      display       : flex;
+      align-items   : center;
+      padding-bottom: 0.1892rem;
+
+      span {
+        padding-left: 0.1351rem;
+      }
+
+      img {
+        width: 0.5405rem;
+      }
+
+      .set_up_icon {
+        margin-left: auto;
+      }
+    }
+
+    .header_body {
+      padding-left: 0.4324rem;
+      display     : flex;
+      align-items : center;
+
+      .user_info {
+        padding-left: 0.3243rem;
+        padding-top : 0.2703rem;
+
+        .user_name {
+
+          font-size: 0.4865rem;
+
+          img {
+            width       : 0.3784rem;
+            height      : 0.3514rem;
+            padding-left: 0.3243rem;
+          }
+        }
+
+        p {
+          font-size: 0.3243rem;
+        }
+      }
+
+      .exchange_code_box {
+        margin-left     : auto;
+        width           : 1.7838rem;
+        height          : 0.5405rem;
+        background-color: #ffffff;
+        border-radius   : 0.973rem 0rem 0rem 0.973rem;
+        background      : rgba(255, 255, 255, 0.5);
+        padding         : 0.0811rem 0;
+        padding-left    : 0.2162rem;
+        display         : flex;
+        align-items     : center;
+
+        span {
+          color: #ffffff;
+        }
+
+        img {
+          width        : 0.4324rem;
+          height       : 0.4054rem;
+          padding-right: 0.1622rem;
+        }
+      }
+    }
+
+    .header_footer {
+      display     : flex;
+      flex-flow   : column;
+      padding-left: 1.1892rem;
+      padding-top : 0.8919rem;
+
+      img {
+        width        : 0.4324rem;
+        height       : 0.3784rem;
+        padding-right: 0.1622rem;
+      }
+
+      span {
+        width         : 100%;
+        font-size     : 0.4865rem;
+        color         : #f0c88f;
+        font-family   : Source Han Sans CN;
+        padding-bottom: 0.2973rem;
+      }
+    }
+  }
+
+  .user_content {}
+}

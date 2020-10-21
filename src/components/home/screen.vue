@@ -4,7 +4,7 @@
     <div class="banner">
       <van-swipe :autoplay="3000" @change="handleChange">
         <van-swipe-item v-for="(image, index) in images" :key="index" class="swipe_box">
-          <img class="swipe_item" v-lazy="image" />
+          <img @click="goVideo" class="swipe_item" v-lazy="image" />
         </van-swipe-item>
         <template #indicator>
           <div class="custom-indicator">
@@ -28,7 +28,7 @@
       <div>
         <ul id="list">
           <li class="item" v-for="(image, index) in lately_img" :key="index" :class="index ==0 ? 'underl' : ''">
-            <img v-lazy="image">
+            <img v-lazy="image" @click="goVideo">
             <div class="lately_info">
               <div class="lately_info_ab">
                 <span class="lately_tip">更新至12集</span>
@@ -72,7 +72,7 @@
       <div>
         <ul id="list">
           <li class="item" v-for="(image, index) in drama_img" :key="index" :class="index ==0 ? 'underl' : ''">
-            <img v-lazy="image">
+            <img v-lazy="image" @click="goVideo">
             <div class="drama_info">
               <div class="drama_info_ab">
                 <span class="drama_tip">29集全</span>
@@ -89,7 +89,7 @@
     <div class="tabbar">
       <ul id="list">
         <li class="item" v-for="(image, index) in tabbar_img" :key="index" :class="index ==0 ? 'underl' : ''">
-          <img v-lazy="image">
+          <img v-lazy="image" @click="goVideo">
         </li>
       </ul>
     </div>
@@ -100,7 +100,7 @@
       <div>
         <ul id="list" :style="{backgroundImage:'url('+require('../../../static/img/bg_harry.png')+')'}">
           <li class="item" v-for="(image, index) in special_img" :key="index" :class="index ==0 ? 'underl' : ''">
-            <img v-lazy="image">
+            <img v-lazy="image" @click="goVideo">
             <div class="special_info">
               <div class="special_info_ab">
                 <span class="special_score">9.1</span>
@@ -353,8 +353,10 @@ export default {
       this.mySwipeIndex = index;
     },
     goMore: function() {
-
       this.$router.push("More")
+    },
+    goVideo: function() {
+      this.$router.push("Video")
     },
     onLoad() {
       // 异步更新数据

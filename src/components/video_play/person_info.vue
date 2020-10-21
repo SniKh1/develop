@@ -41,7 +41,7 @@
             <div>
               <ul id="list">
                 <li class="item" v-for="(image, index) in movie_img" :key="index" :class="index ==0 ? 'underl' : ''">
-                  <img v-lazy="image">
+                  <img v-lazy="image" @click="goVideoMenu">
                   <div class="movie_info">
                     <div class="movie_info_ab">
                       <span class="movie_tip">29集全</span>
@@ -62,7 +62,7 @@
             <div>
               <ul id="list">
                 <li class="item" v-for="(image, index) in drama_img" :key="index" :class="index ==0 ? 'underl' : ''">
-                  <img v-lazy="image">
+                  <img v-lazy="image" @click="goVideo">
                   <div class="drama_info">
                     <div class="drama_info_ab">
                       <span class="drama_tip">29集全</span>
@@ -141,7 +141,10 @@ export default {
       if (this.menuChange) {
         this.menuChange("video_box");
       }
-    }
+    },
+    goVideoMenu() {
+      this.$router.push("Video")
+    },
   },
 
   components: {
