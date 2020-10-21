@@ -34,7 +34,7 @@
       <div class="record">
         <span class="layout_title">
           观看记录
-          <span class="layout_title_span" @click="goMore">更多></span>
+          <span class="layout_title_span" @click="goRecord">更多></span>
         </span>
         <div>
           <ul id="list">
@@ -55,7 +55,7 @@
       <div class="collection">
         <span class="layout_title">
           观看记录
-          <span class="layout_title_span" @click="goMore">更多></span>
+          <span class="layout_title_span" @click="goCollection">更多></span>
         </span>
         <div>
           <ul id="list">
@@ -118,8 +118,11 @@ export default {
   computed: {
   },
   methods: {
-    goMore: function() {
-      this.$router.push("More")
+    goRecord: function() {
+      this.$router.push("Record")
+    },
+    goCollection: function() {
+      this.$router.push("Record")
     },
     goVideo: function() {
       this.$router.push("Video")
