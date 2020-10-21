@@ -12,5 +12,15 @@ html {
     white-space: nowrap;
   }
 
-  .chip-library-container {}
+  .chip-library-container {
+    .header {
+      .van-nav-bar {
+        background-color: #333;
+
+        .van-nav-bar__title {
+          color: #fff;
+        }
+      }
+    }
+  }
 }
