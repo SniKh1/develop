@@ -47,6 +47,12 @@ export const constantRouterMap = [
     meta: { title: '更多', keepAlive: true }
   },
   {
+    path: '/search',
+    name: 'Search',
+    component: () => import('@/components/other/search'),
+    meta: { title: '更多', keepAlive: true }
+  },
+  {
     path: '/video',
     name: 'Video',
     component: () => import('@/components/video_play/video_action'),

@@ -1,7 +1,7 @@
 
 <template>
   <div class="search-container">
-
+    搜索
   </div>
 </template>
 
