@@ -3,7 +3,7 @@
 <template>
   <div class="chip-library-container">
     <div class="header">
-      <van-nav-bar title="片库" :border="false">
+      <van-nav-bar title="片库" :border="false" @click-right="goSearch">
         <template #right>
           <img src="../../../static/img/search_icon.png" alt="">
         </template>
@@ -26,8 +26,28 @@
         <van-tab v-for="label in lables5" :key="label.name" :title="label.name"></van-tab>
       </van-tabs>
     </div>
+    <div class="library">
+      <template>
+        <div class="more_reco_box">
+          <ul class="more_reco_ul">
+            <li v-for="(item, i) in slides2" :class="(1+i) %   3==0  ? 'img_right_box' : 'img_left_box'" @click="goVideo">
+              <div class="img_box" :class="(2+i) %   3==0  ? 'img_center' : ''">
+                <img :src="item.src" alt="">
+                <div class="more_reco_info_ab">
+                  <span class="more_reco_tip">更新至12集</span>
+                  <span class="more_reco_score">9.8</span>
+                </div>
+                <div class="more_reco_info_bt">
+                  <span class="more_reco_name">毒液</span><br />
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </template>
+    </div>
   </div>
-  </div>
+
 </template>
 
 <script>
@@ -61,7 +81,26 @@ export default {
       ,
       lables5: [
         { name: "全部" }, { name: "付费" }, { name: "免费" }
-      ]
+      ], slides2: [
+        {
+          src: require('../../../static/img/drama_img.png'),
+        },
+        {
+          src: require('../../../static/img/drama_img.png'),
+        },
+        {
+          src: require('../../../static/img/drama_img.png'),
+        },
+        {
+          src: require('../../../static/img/drama_img.png'),
+        },
+        {
+          src: require('../../../static/img/drama_img.png'),
+        },
+        {
+          src: require('../../../static/img/drama_img.png'),
+        },
+      ],
     }
   },
 
@@ -70,7 +109,14 @@ export default {
 
   computed: {
   },
-  methods: {},
+  methods: {
+    goSearch: function() {
+      this.$router.push("Search")
+    },
+    goVideo: function() {
+      this.$router.push("Video")
+    }
+  },
 
   components: {},
 
@@ -103,12 +149,102 @@ export default {
     height: 1.125rem;
     .van-tabs__wrap {
       .van-tabs__nav {
+        padding: 0;
         background: #333;
         .van-tab {
           color: #fff;
+          padding: 0;
+          flex: none;
+          -webkit-box-flex: none;
+          width: 1.5625rem;
         }
         .van-tab--active {
           color: #ffc53d;
+        }
+      }
+    }
+  }
+}
+
+.library {
+  .layout_title {
+    padding-top: 0.2703rem;
+  }
+
+  .more_reco_box {
+    .more_reco_ul {
+      text-align: center;
+
+      li {
+        width: 32%;
+        display: inline-block;
+        position: relative;
+
+        .img_box {
+          text-align: left;
+          padding: 0 0.1757rem;
+
+          img {
+            // width : 90%;
+            margin: auto;
+          }
+        }
+
+        .more_reco_info_ab {
+          white-space: nowrap;
+          display: flex;
+          position: absolute;
+          bottom: 20%;
+          width: 96%;
+          padding: 0 0.0811rem;
+          line-height: 0;
+
+          .more_reco_tip {
+            color: #fff !important;
+            font-size: 0.3243rem;
+          }
+
+          .more_reco_score {
+            padding-right: 12.2%;
+            margin-left: auto;
+            color: #ffc53d;
+
+            img {
+              padding-left: 0.1351rem;
+              width: 0.3784rem;
+              -webkit-mask-image: none;
+              border-radius: 0rem;
+            }
+          }
+        }
+
+        .more_reco_info_bt {
+          text-align: left;
+
+          .more_reco_name {
+            // font-size   : 0.1622rem;
+            font-size: 0.3784rem;
+            color: #fff;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+          }
+        }
+      }
+
+      .img_left_box {
+        .img_box {
+          padding-left: 0rem;
+        }
+
+        .img_center {
+          padding: 0 0.0878rem;
+        }
+      }
+
+      .img_right_box {
+        .img_box {
+          padding-right: 0rem;
         }
       }
     }
