@@ -30,7 +30,50 @@
         </span>
       </div>
     </div>
-    <div class="user_content"></div>
+    <div class="user_content">
+      <div class="record">
+        <span class="layout_title">
+          观看记录
+          <span class="layout_title_span" @click="goMore">更多></span>
+        </span>
+        <div>
+          <ul id="list">
+            <li class="item" v-for="(image, index) in record_img" :key="index" :class="index ==0 ? 'underl' : ''">
+              <img v-lazy="image" @click="goVideo">
+              <div class="record_info">
+                <div class="record_info_ab">
+                  <span class="record_tip">更新至12集</span>
+                </div>
+                <div class="record_info_bt">
+                  <span class="record_name">蜘蛛侠：平行宇宙</span><br />
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="collection">
+        <span class="layout_title">
+          观看记录
+          <span class="layout_title_span" @click="goMore">更多></span>
+        </span>
+        <div>
+          <ul id="list">
+            <li class="item" v-for="(image, index) in collection_img" :key="index" :class="index ==0 ? 'underl' : ''">
+              <img v-lazy="image" @click="goVideo">
+              <div class="collection_info">
+                <div class="collection_info_ab">
+                  <span class="collection_tip">更新至12集</span>
+                </div>
+                <div class="collection_info_bt">
+                  <span class="collection_name">蜘蛛侠：平行宇宙</span><br />
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -49,6 +92,22 @@ export default {
       person_img: [
         require('../../../static/img/touxiang.png'),
       ],
+      record_img: [
+        require('../../../static/img/lately_img1.png'),
+        require('../../../static/img/lately_img1.png'),
+        require('../../../static/img/lately_img1.png'),
+        require('../../../static/img/lately_img1.png'),
+        require('../../../static/img/lately_img1.png'),
+        require('../../../static/img/lately_img1.png'),
+      ],
+      collection_img: [
+        require('../../../static/img/lately_img1.png'),
+        require('../../../static/img/lately_img1.png'),
+        require('../../../static/img/lately_img1.png'),
+        require('../../../static/img/lately_img1.png'),
+        require('../../../static/img/lately_img1.png'),
+        require('../../../static/img/lately_img1.png'),
+      ],
     }
   },
 
@@ -58,7 +117,14 @@ export default {
 
   computed: {
   },
-  methods: {},
+  methods: {
+    goMore: function() {
+      this.$router.push("More")
+    },
+    goVideo: function() {
+      this.$router.push("Video")
+    },
+  },
 
   components: {},
 
