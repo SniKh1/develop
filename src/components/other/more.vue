@@ -60,7 +60,8 @@ export default {
           sets: '29集',
           desc: '哈利波特是一个孤儿，从小寄养在姨妈家， 受尽欺凌但就在哈利11岁',
           img_coll: require('../../../static/img/coll_f.png')
-        }, {
+        },
+        {
           img: require('../../../static/img/flow_1.png'),
           name: '哈利·波特与魔法石',
           score: '8.6',
@@ -68,7 +69,8 @@ export default {
           sets: '29集',
           desc: '哈利波特是一个孤儿，从小寄养在姨妈家， 受尽欺凌但就在哈利11岁',
           img_coll: require('../../../static/img/coll_t.png')
-        }, {
+        },
+        {
           img: require('../../../static/img/flow_1.png'),
           name: '哈利·波特与魔法石',
           score: '8.6',
@@ -76,7 +78,8 @@ export default {
           sets: '29集',
           desc: '哈利波特是一个孤儿，从小寄养在姨妈家， 受尽欺凌但就在哈利11岁',
           img_coll: require('../../../static/img/coll_f.png')
-        }, {
+        },
+        {
           img: require('../../../static/img/flow_1.png'),
           name: '哈利·波特与魔法石',
           score: '8.6',
@@ -84,7 +87,8 @@ export default {
           sets: '29集',
           desc: '哈利波特是一个孤儿，从小寄养在姨妈家， 受尽欺凌但就在哈利11岁',
           img_coll: require('../../../static/img/coll_f.png')
-        }, {
+        },
+        {
           img: require('../../../static/img/flow_1.png'),
           name: '哈利·波特与魔法石',
           score: '8.6',
@@ -92,7 +96,8 @@ export default {
           sets: '29集',
           desc: '哈利波特是一个孤儿，从小寄养在姨妈家， 受尽欺凌但就在哈利11岁',
           img_coll: require('../../../static/img/coll_f.png')
-        }, {
+        },
+        {
           img: require('../../../static/img/flow_1.png'),
           name: '哈利·波特与魔法石',
           score: '8.6',
@@ -100,7 +105,8 @@ export default {
           sets: '29集',
           desc: '哈利波特是一个孤儿，从小寄养在姨妈家， 受尽欺凌但就在哈利11岁',
           img_coll: require('../../../static/img/coll_f.png')
-        }, {
+        },
+        {
           img: require('../../../static/img/flow_1.png'),
           name: '哈利·波特与魔法石',
           score: '8.6',
@@ -108,7 +114,8 @@ export default {
           sets: '29集',
           desc: '哈利波特是一个孤儿，从小寄养在姨妈家， 受尽欺凌但就在哈利11岁',
           img_coll: require('../../../static/img/coll_f.png')
-        }, {
+        },
+        {
           img: require('../../../static/img/flow_1.png'),
           name: '哈利·波特与魔法石',
           score: '8.6',
@@ -116,7 +123,8 @@ export default {
           sets: '29集',
           desc: '哈利波特是一个孤儿，从小寄养在姨妈家， 受尽欺凌但就在哈利11岁',
           img_coll: require('../../../static/img/coll_f.png')
-        }, {
+        },
+        {
           img: require('../../../static/img/flow_1.png'),
           name: '哈利·波特与魔法石',
           score: '8.6',
