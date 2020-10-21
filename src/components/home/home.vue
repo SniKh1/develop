@@ -59,9 +59,9 @@
 import Vue from 'vue'
 import { Tab, Tabs } from 'vant'
 import { Toast } from 'vant'
-import screen from '../../components/index/screen'
-import cinema from '../../components/index/cinema'
-import special from '../../components/index/special'
+import screen from './screen'
+import cinema from './cinema'
+import special from './special'
 
 Vue.use(Tab)
 Vue.use(Tabs)

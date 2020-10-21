@@ -100,62 +100,62 @@ export default {
     return {
       slides: [
         {
-          src: require('../../..../../../static/img/banner_3.png'),
+          src: require('../../../static/img/banner_3.png'),
         },
         {
-          src: require('../../..../../../static/img/banner_3.png'),
+          src: require('../../../static/img/banner_3.png'),
         },
         {
-          src: require('../../..../../../static/img/banner_3.png'),
+          src: require('../../../static/img/banner_3.png'),
         },
         {
-          src: require('../../..../../../static/img/banner_3.png'),
+          src: require('../../../static/img/banner_3.png'),
         },
         {
-          src: require('../../..../../../static/img/banner_3.png'),
+          src: require('../../../static/img/banner_3.png'),
         },
         {
-          src: require('../../..../../../static/img/banner_3.png'),
+          src: require('../../../static/img/banner_3.png'),
         },
       ],
       slides2: [
         {
-          src: require('../../..../../../static/img/banner_2.png'),
+          src: require('../../../static/img/banner_2.png'),
         },
         {
-          src: require('../../..../../../static/img/banner_2.png'),
+          src: require('../../../static/img/banner_2.png'),
         },
         {
-          src: require('../../..../../../static/img/banner_2.png'),
+          src: require('../../../static/img/banner_2.png'),
         },
         {
-          src: require('../../..../../../static/img/banner_3.png'),
+          src: require('../../../static/img/banner_3.png'),
         },
         {
-          src: require('../../..../../../static/img/banner_3.png'),
+          src: require('../../../static/img/banner_3.png'),
         },
         {
-          src: require('../../..../../../static/img/banner_3.png'),
+          src: require('../../../static/img/banner_3.png'),
         },
       ],
       slides3: [
         {
-          src: require('../../..../../../static/img/bg_harry.png'),
+          src: require('../../../static/img/bg_harry.png'),
         },
         {
-          src: require('../../..../../../static/img/bg_harry.png'),
+          src: require('../../../static/img/bg_harry.png'),
         },
         {
-          src: require('../../..../../../static/img/bg_harry.png'),
+          src: require('../../../static/img/bg_harry.png'),
         },
         {
-          src: require('../../..../../../static/img/banner_3.png'),
+          src: require('../../../static/img/banner_3.png'),
         },
         {
-          src: require('../../..../../../static/img/banner_3.png'),
+          src: require('../../../static/img/banner_3.png'),
         },
         {
-          src: require('../../..../../../static/img/banner_3.png'),
+          src: require('../../../static/img/banner_3.png'),
         },
       ],
     };
@@ -182,7 +182,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import '~@/styles/home/index/cinema.scss';
+@import '~@/styles/home/cinema.scss';
 </style>
 <!-- 覆盖子组件样式 -->
 <style lang="scss" >

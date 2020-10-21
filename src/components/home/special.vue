@@ -309,7 +309,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import '~@/styles/home/index/special.scss';
+@import '~@/styles/home/special.scss';
 </style>
 <!-- 覆盖子组件样式 -->
 <style lang="scss" >

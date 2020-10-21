@@ -13,7 +13,7 @@
 </template>
 
 <script>
-import TabBar from '@/components/TabBar'
+import TabBar from '@/components/common/TabBar'
 export default {
   name: 'AppLayout',
   data() {

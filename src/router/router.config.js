@@ -10,32 +10,32 @@ export const constantRouterMap = [
     redirect: '/home',
     meta: {
       title: '首页',
-      keepAlive: false
+      keepAlive: true
     },
     children: [
       {
         path: '/home',
         name: 'Home',
-        component: () => import('@/views/home/home'),
-        meta: { title: '首页', keepAlive: false },
+        component: () => import('@/components/home/home'),
+        meta: { title: '首页', keepAlive: true },
         children: []
       },
       {
         path: '/some',
         name: 'Some',
-        component: () => import('@/components/other/more'),
-        meta: { title: '随心看', keepAlive: false }
+        component: () => import('@/components/short/short'),
+        meta: { title: '随心看', keepAlive: true }
       },
       {
         path: '/lib',
         name: 'Lib',
-        component: () => import('@/views/chip_library/chip_library'),
+        component: () => import('@/components/chip_library/chip_library'),
         meta: { title: '片库', keepAlive: true }
       },
       {
         path: '/user',
         name: 'User',
-        component: () => import('@/views/home/home'),
+        component: () => import('@/components/user/user'),
         meta: { title: '我的', keepAlive: true }
       }
     ]
@@ -44,25 +44,25 @@ export const constantRouterMap = [
     path: '/more',
     name: 'More',
     component: () => import('@/components/other/more'),
-    meta: { title: '更多', keepAlive: false }
+    meta: { title: '更多', keepAlive: true }
   },
   {
     path: '/video',
     name: 'Video',
     component: () => import('@/components/video_play/video_action'),
-    meta: { title: '视频播放', keepAlive: false },
+    meta: { title: '视频播放', keepAlive: true },
     children: [
       {
         path: '/video',
         name: 'Video_info',
         component: () => import('@/components/video_play/video_info'),
-        meta: { title: '视频信息', keepAlive: false },
+        meta: { title: '视频信息', keepAlive: true },
         children: [
           {
             path: '/video',
             name: 'Video_comment',
             component: () => import('@/components/video_play/video_comment'),
-            meta: { title: '视频信息', keepAlive: false },
+            meta: { title: '用户信息', keepAlive: true },
             children: []
           }
         ]
@@ -71,7 +71,7 @@ export const constantRouterMap = [
         path: '/video',
         name: 'Person_info',
         component: () => import('@/components/video_play/person_info'),
-        meta: { title: '演员信息', keepAlive: false },
+        meta: { title: '演员信息', keepAlive: true },
         children: []
       }
     ]

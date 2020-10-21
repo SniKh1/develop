@@ -382,7 +382,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import '~@/styles/home/index/screen.scss';
+@import '~@/styles/home/screen.scss';
 </style>
 <!-- 覆盖子组件样式 -->
 <style lang="scss" >
