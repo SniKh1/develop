@@ -342,7 +342,7 @@ export default {
   props: {
     //父组件切换明星详情方法 注册
     menuChange: {
-      type: Function,
+      type,
       default: null
     }
   },
@@ -354,7 +354,7 @@ export default {
       }
     },
     //跳转更多
-    goMore: function() {
+    goMore() {
       this.$router.push("More")
     },
     //换集

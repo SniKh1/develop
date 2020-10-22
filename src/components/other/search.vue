@@ -60,7 +60,7 @@ export default {
       Toast(val);
     },
     onCancel() {
-      Toast('取消');
+      this.$router.go(-1)
     },
   },
   components: {},
@@ -127,47 +127,6 @@ export default {
       border: none;
       color: #eeeeee;
       line-height: 19px;
-    }
-  }
-}
-
-//热门搜索
-.search_hot {
-  padding: 0.25rem 0 0 0.5rem;
-
-  p {
-    font-size: 16px;
-    margin: 0px;
-    color: #ffc53d;
-  }
-
-  ul {
-    li:nth-child(1) > span:nth-child(1) {
-      background-color: #ff6b3d;
-    }
-
-    li:nth-child(2) > span:nth-child(1) {
-      background-color: #ff9e3d;
-    }
-
-    li:nth-child(3) > span:nth-child(1) {
-      background-color: #ffc53d;
-    }
-
-    li {
-      padding: 0.4rem 0 0 0;
-
-      span:nth-child(1) {
-        padding: 4px;
-        border-radius: 5px;
-        font-size: 18px;
-        background-color: #a4a4a4;
-      }
-
-      span:nth-child(2) {
-        padding-left: 0.4688rem;
-        font-size: 16px;
-      }
     }
   }
 }

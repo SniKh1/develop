@@ -145,10 +145,10 @@ export default {
   },
 
   methods: {
-    onClickLeft: function() {
+    onClickLeft() {
       this.$router.go(-1)
     },
-    goVideo: function() {
+    goVideo() {
       this.$router.push("Video")
     },
   },

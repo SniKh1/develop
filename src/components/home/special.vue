@@ -298,10 +298,10 @@ export default {
         }
       }, 1000);
     },
-    goMore: function() {
+    goMore() {
       this.$router.push("More")
     },
-    goVideo: function() {
+    goVideo() {
       this.$router.push("Video")
     },
   },

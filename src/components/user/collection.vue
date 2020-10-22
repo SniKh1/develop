@@ -161,10 +161,10 @@ export default {
   },
 
   methods: {
-    onClickLeft: function() {
+    onClickLeft() {
       this.$router.go(-1)
     },
-    onClickRight: function() {
+    onClickRight() {
       this.$router.go(-1)
     },
 

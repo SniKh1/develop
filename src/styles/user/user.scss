@@ -111,10 +111,11 @@ html {
     }
 
     .header_footer {
-      display     : flex;
-      flex-flow   : column;
-      padding-left: 1.1892rem;
-      padding-top : 0.5946rem;
+      display      : flex;
+      flex-flow    : column;
+      padding-left : 1.1892rem;
+      padding-right: 1.1892rem;
+      padding-top  : 0.5946rem;
 
       img {
         width        : 0.4324rem;

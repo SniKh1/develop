@@ -122,7 +122,7 @@ export default {
   props: {
     //父组件切换明星详情方法 注册
     menuChange: {
-      type: Function,
+      type,
       default: null
     }
   },

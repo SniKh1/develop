@@ -21,7 +21,7 @@
           </span>
         </div>
       </div>
-      <div class="header_footer">
+      <div class="header_footer" @click="goVip">
         <span>
           <img src="../../../static/img/huiyuan.png" alt="">VIP会员中心
         </span>
@@ -118,15 +118,18 @@ export default {
   computed: {
   },
   methods: {
-    goRecord: function() {
+    goRecord() {
       this.$router.push("Record")
     },
-    goCollection: function() {
+    goCollection() {
       this.$router.push("Record")
     },
-    goVideo: function() {
+    goVideo() {
       this.$router.push("Video")
     },
+    goVip() {
+
+    }
   },
 
   components: {},

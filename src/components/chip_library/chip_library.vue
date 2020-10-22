@@ -110,10 +110,10 @@ export default {
   computed: {
   },
   methods: {
-    goSearch: function() {
+    goSearch() {
       this.$router.push("Search")
     },
-    goVideo: function() {
+    goVideo() {
       this.$router.push("Video")
     }
   },
