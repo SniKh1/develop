@@ -78,6 +78,10 @@ export default {
     .van-search {
       background: #333;
 
+      .van-search__action:active {
+        background-color: #333;
+      }
+
       .van-search__content--round {
         background-color: #666;
 
