@@ -154,7 +154,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import '~@/styles/video_play/person_info.scss';
+@import '~@/styles/video/person-info.scss';
 </style>
 <style lang="scss">
 .person-container {

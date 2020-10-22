@@ -34,8 +34,8 @@ Vue.use(Sticky);
 Vue.use(Tab);
 Vue.use(Tabs);
 
-import video_box from './video_info'
-import person_box from './person_info'
+import video_box from './VideoInfo'
+import person_box from './PersonInfo'
 
 export default {
   data() {
@@ -142,7 +142,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import '~@/styles/video_play/video_action.scss';
+@import '~@/styles/video/video.scss';
 </style>
 <style lang="scss">
 .video-container {

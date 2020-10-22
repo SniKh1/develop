@@ -107,7 +107,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import '~@/styles/video_play/video_comment.scss';
+@import '~@/styles/video/video-comment.scss';
 </style>
 <style lang="scss">
 </style>

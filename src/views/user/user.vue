@@ -128,7 +128,7 @@ export default {
       this.$router.push("Video")
     },
     goVip() {
-
+      this.$router.push("Vip")
     }
   },
 
