@@ -19,26 +19,26 @@ export default {
       tabbars: [{
         name: 'Home',
         title: '首页',
-        normal: require('../../../static/img/home_active.png'),
-        active: require('../../../static/img/home_inactive.png')
+        normal: require('../../static/img/home_active.png'),
+        active: require('../../static/img/home_inactive.png')
       },
       {
         name: 'Some',
         title: '随心看',
-        normal: require('../../../static/img/some_active.png'),
-        active: require('../../../static/img/some_inactive.png')
+        normal: require('../../static/img/some_active.png'),
+        active: require('../../static/img/some_inactive.png')
       },
       {
         name: 'Lib',
         title: '片库',
-        normal: require('../../../static/img/lib_active.png'),
-        active: require('../../../static/img/lib_inactive.png')
+        normal: require('../../static/img/lib_active.png'),
+        active: require('../../static/img/lib_inactive.png')
       },
       {
         name: 'User',
         title: '我的',
-        normal: require('../../../static/img/user_active.png'),
-        active: require('../../../static/img/user_inactive.png')
+        normal: require('../../static/img/user_active.png'),
+        active: require('../../static/img/user_inactive.png')
       },
       ]
     }

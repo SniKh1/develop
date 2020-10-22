@@ -157,7 +157,7 @@ import { ShareSheet } from 'vant';
 // videojs引用
 import videojs from "video.js";
 import "videojs-contrib-hls";
-import video_comment from './video_comment'
+import video_comment from './VideoComment'
 
 Vue.use(ShareSheet);
 Vue.use(Tab);
@@ -386,7 +386,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import '~@/styles/video_play/video_info.scss';
+@import '~@/styles/video/video.scss';
 </style>
 <style lang="scss">
 .video-container {
