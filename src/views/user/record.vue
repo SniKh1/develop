@@ -2,7 +2,7 @@
 <template>
   <div class="record-container">
     <template>
-      <van-nav-bar title="我的收藏"" left-text="" right-text=" 编辑" left-arrow @click-left=" onClickLeft" @click-right=" onClickRight" fixed
+      <van-nav-bar title="我的收藏" left-text="" right-text=" 编辑" left-arrow @click-left=" onClickLeft" @click-right=" onClickRight" fixed
                    :border='false' />
     </template>
 

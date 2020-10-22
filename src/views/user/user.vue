@@ -16,10 +16,15 @@
         </div>
         <div class="exchange_code_box">
           <img src="../../../static/img/duihuanma.png" alt="">
-          <span>
+          <span @click="showPopup">
             兑换码
           </span>
+
         </div>
+        <van-popup v-model="show">
+          <div>
+          </div>
+        </van-popup>
       </div>
       <div class="header_footer" @click="goVip">
         <span>
@@ -83,12 +88,15 @@
 import Vue from 'vue'
 import { Image as VanImage } from 'vant';
 import { Lazyload } from 'vant';
+import { Popup } from 'vant';
 
+Vue.use(Popup);
 Vue.use(Lazyload);
 Vue.use(VanImage);
 export default {
   data() {
     return {
+      show: false,
       person_img: [
         require('../../../static/img/touxiang.png'),
       ],
@@ -129,7 +137,10 @@ export default {
     },
     goVip() {
       this.$router.push("Vip")
-    }
+    },
+    showPopup() {
+      this.show = true;
+    },
   },
 
   components: {},

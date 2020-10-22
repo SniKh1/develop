@@ -342,7 +342,7 @@ export default {
   props: {
     //父组件切换明星详情方法 注册
     menuChange: {
-      type,
+      type: null,
       default: null
     }
   },
@@ -386,7 +386,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import '~@/styles/video/video.scss';
+@import '~@/styles/video/video-info.scss';
 </style>
 <style lang="scss">
 .video-container {

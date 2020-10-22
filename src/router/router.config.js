@@ -91,13 +91,13 @@ export const constantRouterMap = [
     children: [
       {
         path: '/video',
-        name: 'Video_info',
+        name: 'VideoInfo',
         component: () => import('@/views/video/VideoInfo'),
         meta: { title: '视频信息', keepAlive: true },
         children: [
           {
             path: '/video',
-            name: 'Video_comment',
+            name: 'Video_comVideoCommentment',
             component: () => import('@/views/video/VideoComment'),
             meta: { title: '用户信息', keepAlive: true },
             children: []
@@ -106,7 +106,7 @@ export const constantRouterMap = [
       },
       {
         path: '/video',
-        name: 'Person_info',
+        name: 'PersonInfo',
         component: () => import('@/views/video/PersonInfo'),
         meta: { title: '演员信息', keepAlive: true },
         children: []

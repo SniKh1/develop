@@ -4,3 +4,17 @@
 [1016/094101.260:ERROR:directory_reader_win.cc(43)] FindFirstFile: 系统找不到指定的路径。 (0x3)
 [1019/090511.697:ERROR:directory_reader_win.cc(43)] FindFirstFile: 系统找不到指定的路径。 (0x3)
 [1022/090818.024:ERROR:directory_reader_win.cc(43)] FindFirstFile: 系统找不到指定的路径。 (0x3)
+[1022/164753.718:ERROR:process_reader_win.cc(127)] NtOpenThread: {无法访问} 过程已请求访问一对象，但未给访问权限。 (0xc0000022)
+[1022/164753.718:ERROR:process_reader_win.cc(127)] NtOpenThread: {无法访问} 过程已请求访问一对象，但未给访问权限。 (0xc0000022)
+[1022/164753.718:ERROR:process_reader_win.cc(127)] NtOpenThread: {无法访问} 过程已请求访问一对象，但未给访问权限。 (0xc0000022)
+[1022/164753.718:ERROR:process_reader_win.cc(127)] NtOpenThread: {无法访问} 过程已请求访问一对象，但未给访问权限。 (0xc0000022)
+[1022/164753.724:ERROR:exception_snapshot_win.cc(100)] thread ID 4104 not found in process
+[1022/164753.724:ERROR:exception_snapshot_win.cc(100)] thread ID 15748 not found in process
+[1022/164753.724:ERROR:exception_snapshot_win.cc(100)] thread ID 14988 not found in process
+[1022/164753.724:ERROR:exception_snapshot_win.cc(100)] thread ID 2556 not found in process
+[1022/164753.724:ERROR:process_reader_win.cc(127)] NtOpenThread: {无法访问} 过程已请求访问一对象，但未给访问权限。 (0xc0000022)
+[1022/164753.724:ERROR:exception_snapshot_win.cc(100)] thread ID 9048 not found in process
+[1022/164754.052:ERROR:filesystem_win.cc(129)] GetFileAttributes C:\Users\sg\AppData\Local\Microsoft\Edge\User Data\Crashpad\attachments\b32ed136-ee3e-46f9-bc9d-7ebb0f3ce81b: 系统找不到指定的路径。 (0x3)
+[1022/164754.052:ERROR:filesystem_win.cc(129)] GetFileAttributes C:\Users\sg\AppData\Local\Microsoft\Edge\User Data\Crashpad\attachments\e94e483b-29cc-4cc9-a02c-9dcfaa90c3e4: 系统找不到指定的路径。 (0x3)
+[1022/164754.068:ERROR:filesystem_win.cc(129)] GetFileAttributes C:\Users\sg\AppData\Local\Microsoft\Edge\User Data\Crashpad\attachments\e98308df-8727-45d2-9834-5a6905fe765f: 系统找不到指定的路径。 (0x3)
+[1022/164754.083:ERROR:filesystem_win.cc(129)] GetFileAttributes C:\Users\sg\AppData\Local\Microsoft\Edge\User Data\Crashpad\attachments\c667ceb9-21f9-47e3-a7df-08dd8f9a4e05: 系统找不到指定的路径。 (0x3)
