@@ -69,7 +69,19 @@ export const constantRouterMap = [
     path: '/vip',
     name: 'Vip',
     component: () => import('@/views/vip/vip'),
-    meta: { title: '收藏记录', keepAlive: true }
+    meta: { title: '会员', keepAlive: true }
+  },
+  {
+    path: '/login',
+    name: 'Login',
+    component: () => import('@/views/user/login'),
+    meta: { title: '登录', keepAlive: true }
+  },
+  {
+    path: '/register',
+    name: 'Register',
+    component: () => import('@/views/user/register'),
+    meta: { title: '注册', keepAlive: true }
   },
   {
     path: '/video',
