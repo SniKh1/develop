@@ -19,10 +19,13 @@
           <span @click="showPopup">
             兑换码
           </span>
-
         </div>
         <van-popup v-model="show">
-          <div>
+          <div class="popup">
+            <div class="pop_header">请输入您的兑换码</div>
+            <div class="pop_body">
+              <van-field v-model="code" label="" input-align="center" placeholder="请输入用户名" />
+            </div>
           </div>
         </van-popup>
       </div>
@@ -89,13 +92,16 @@ import Vue from 'vue'
 import { Image as VanImage } from 'vant';
 import { Lazyload } from 'vant';
 import { Popup } from 'vant';
+import { Field } from 'vant';
 
+Vue.use(Field);
 Vue.use(Popup);
 Vue.use(Lazyload);
 Vue.use(VanImage);
 export default {
   data() {
     return {
+      code: '',
       show: false,
       person_img: [
         require('../../../static/img/touxiang.png'),
@@ -152,4 +158,14 @@ export default {
 @import '~@/styles/user/user.scss';
 </style>
 <style lang="scss">
+html {
+  .van-popup {
+    border-radius: 0.2703rem;
+  }
+  // .pop_body {
+  //   input.van-field__control {
+  //     text-align: center;
+  //   }
+  // }
+}
 </style>

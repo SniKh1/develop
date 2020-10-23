@@ -108,6 +108,22 @@ html {
           padding-right: 0.1622rem;
         }
       }
+
+      .popup {
+        width        : 7.8108rem;
+        height       : 5.8378rem;
+        border-radius: 0.2703rem;
+
+        .pop_header {
+          background     : url('../../../static/img/duihuanma_bg.png') no-repeat;
+          height         : 1.6216rem;
+          background-size: 100%;
+          display        : flex;
+          align-items    : center;
+          justify-content: center;
+          font-size      : 0.4865rem;
+        }
+      }
     }
 
     .header_footer {
