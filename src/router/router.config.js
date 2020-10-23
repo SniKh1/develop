@@ -23,7 +23,7 @@ export const constantRouterMap = [
       {
         path: '/some',
         name: 'Some',
-        component: () => import('@/views/setting/account'),
+        component: () => import('@/views/setting/device'),
         meta: { title: '随心看', keepAlive: true }
       },
       {
