@@ -24,7 +24,8 @@
           <div class="popup">
             <div class="pop_header">请输入您的兑换码</div>
             <div class="pop_body">
-              <van-field v-model="code" label="" input-align="center" placeholder="请输入用户名" />
+              <van-field v-model="code" label="" input-align="center" placeholder="请输入兑换码" />
+              <van-button round type="info">圆形按钮</van-button>
             </div>
           </div>
         </van-popup>
@@ -62,7 +63,7 @@
       </div>
       <div class="collection">
         <span class="layout_title">
-          观看记录
+          收藏记录
           <span class="layout_title_span" @click="goCollection">更多></span>
         </span>
         <div>
@@ -93,7 +94,9 @@ import { Image as VanImage } from 'vant';
 import { Lazyload } from 'vant';
 import { Popup } from 'vant';
 import { Field } from 'vant';
+import { Button } from 'vant';
 
+Vue.use(Button);
 Vue.use(Field);
 Vue.use(Popup);
 Vue.use(Lazyload);
@@ -162,10 +165,28 @@ html {
   .van-popup {
     border-radius: 0.2703rem;
   }
-  // .pop_body {
-  //   input.van-field__control {
-  //     text-align: center;
-  //   }
-  // }
+  .pop_body {
+    .van-cell {
+      .van-field__body {
+        justify-content: center;
+        padding-top: 0.365rem;
+        input.van-field__control {
+          width: 6.25rem;
+          height: 1.125rem;
+          background: #f2f2f2;
+          opacity: 1;
+          border-radius: 0.125rem;
+        }
+      }
+    }
+    .van-button {
+      width: 6.25rem;
+      height: 1rem;
+      background: #ffa957;
+      opacity: 1;
+      border-radius: 0.6875rem;
+      border: none;
+    }
+  }
 }
 </style>

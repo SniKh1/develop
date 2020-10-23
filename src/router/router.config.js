@@ -23,7 +23,7 @@ export const constantRouterMap = [
       {
         path: '/some',
         name: 'Some',
-        component: () => import('@/views/short/short'),
+        component: () => import('@/views/setting/optimization'),
         meta: { title: '随心看', keepAlive: true }
       },
       {
@@ -112,5 +112,17 @@ export const constantRouterMap = [
         children: []
       }
     ]
+  },
+  {
+    path: '/setting',
+    name: 'Setting',
+    component: () => import('@/views/setting/setting'),
+    meta: { title: '设置', keepAlive: true }
+  },
+  {
+    path: '/optimization',
+    name: 'Optimization',
+    component: () => import('@/views/setting/optimization'),
+    meta: { title: '注册', keepAlive: true }
   }
 ]

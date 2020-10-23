@@ -24,6 +24,8 @@ html {
 
 
   .cinema-container {
+    overflow-x: hidden;
+    width     : 100%;
 
     //热门
     .hot {

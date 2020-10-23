@@ -47,5 +47,8 @@
     "url": "https://github.com/SniKh1/develop/issues"
   },
   "homepage": "https://github.com/SniKh1/develop/develop#readme",
-  "main": ".postcssrc.js"
+  "main": ".postcssrc.js",
+  "directories": {
+    "test": "test"
+  }
 }
