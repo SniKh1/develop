@@ -1,37 +1,20 @@
 
 <template>
-  <div class="setting-container">
+  <div class="account-container">
     <template>
       <van-nav-bar :title="title" left-text="" right-text="" left-arrow @click-left=" onClickLeft" fixed :border='false' />
     </template>
-    <div class="setting_box">
-      <div class="set_child top">
-        <van-cell-group :border="false">
-          <van-cell title="个人资料" is-link />
-          <van-cell title="账号安全" is-link />
-        </van-cell-group>
-      </div>
+    <div class="account_box">
       <div class="set_child center">
         <van-cell-group :border="false">
-          <van-cell title="默认清晰度" value="1080p" />
-          <van-cell title="连续播放" value="开" />
-          <van-cell title="青少年播放模式" value="关" />
-          <van-cell title="消息推送" value="开" />
+          <van-cell title="手机" value="未绑定" is-link />
+          <van-cell title="微信" value="未绑定" is-link />
+          <van-cell title="邮箱" value="未绑定" is-link />
+          <van-cell title="登录密码" is-link />
+          <van-cell title="登录设备管理" is-link />
         </van-cell-group>
       </div>
-      <div class="set_child bottom">
-        <van-cell-group :border="false">
-          <van-cell title="清楚缓存"" value=" 230m" />
-          <van-cell title="优化建议" is-link />
-          <van-cell title="关于我们" is-link />
-        </van-cell-group>
-      </div>
-      <div class="out">
-        <van-cell title="清楚缓存""/>
-      </div>
-      <div class=" edition">
-          APP版本号：V1.0.0
-      </div>
+
     </div>
   </div>
 </template>
@@ -58,7 +41,11 @@ export default {
   props: ["data"],
   data() {
     return {
-      title: "设置"
+      title: "账号安全",
+      image: require('../../../static/img/touxiang.png'),
+      person_img: [
+        require('../../../static/img/touxiang.png'),
+      ],
     };
   },
   created() {
@@ -80,7 +67,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import '~@/styles/setting/setting.scss';
+@import '~@/styles/setting/account.scss';
 </style>
 <!-- 覆盖子组件样式 -->
 <style lang="scss" >
@@ -88,7 +75,7 @@ html {
   * {
     color: #fff;
   }
-  .setting-container {
+  .account-container {
     .van-nav-bar {
       background-color: #4c4c4e;
       .van-nav-bar__left {
@@ -103,30 +90,33 @@ html {
       }
     }
   }
-  .setting_box {
+  .account_box {
     .van-cell-group {
       background: #4c4c4e;
       .van-cell {
         background: #4c4c4e;
-        &::after {
-          border-bottom: 0.02667rem solid #666666;
-        }
-      }
-    }
-    .out {
-      .van-cell {
-        background: #4c4c4e;
         .van-cell__title {
-          text-align: center;
+          display: flex;
+          align-items: center;
+        }
+        .van-cell__value {
           span {
             color: #999999;
+            font-size: 12px;
           }
         }
         .van-cell__right-icon {
           color: #fff;
         }
+        &::after {
+          border-bottom: 0.02667rem solid #666666;
+        }
       }
     }
+  }
+  .search-icon {
+    font-size: 16px;
+    line-height: inherit;
   }
 }
 </style>
