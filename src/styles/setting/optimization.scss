@@ -1,0 +1,38 @@
+html {
+  .optimization-container {
+    padding-top: 1.2267rem;
+
+    .optimization_check {
+      padding-left: 0.5333rem;
+
+      p.title {
+        font-size   : 0.4267rem;
+        color       : #fff;
+        padding-left: 0.24rem;
+      }
+    }
+
+    .optimization_text {
+      padding: 0 0.5333rem;
+
+      p.title {
+        font-size   : 0.4267rem;
+        color       : #fff;
+        padding-left: 0.24rem;
+      }
+
+      .van-cell {
+        .van-cell__title {
+          display: none;
+        }
+      }
+    }
+
+    .optimization_bt {
+      padding    : 0 0.5333rem;
+      padding-top: 0.96rem;
+
+    }
+  }
+
+}

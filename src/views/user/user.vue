@@ -6,7 +6,7 @@
       <div class="header_top">
         <img class="scan_code_icon" src="../../../static/img/saoma.png" alt="">
         <span>扫一扫</span>
-        <img class="set_up_icon" src="../../../static/img/shezhi.png" alt="">
+        <img class="set_up_icon" src="../../../static/img/shezhi.png" alt="" @click="goSetting">
       </div>
       <div class="header_body" v-for="(image, index) in person_img">
         <van-image round width="70" height="70" lazy-load :src="image" />
@@ -134,6 +134,8 @@ export default {
 
   computed: {
   },
+
+
   methods: {
     goRecord() {
       this.$router.push("Record")
@@ -150,6 +152,9 @@ export default {
     showPopup() {
       this.show = true;
     },
+    goSetting() {
+      this.$router.push('Setting')
+    }
   },
 
   components: {},

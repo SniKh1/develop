@@ -1,7 +1,10 @@
 <template>
   <div class="optimization-container">
+    <template>
+      <van-nav-bar :title="title" left-text="" right-text="" left-arrow @click-left=" onClickLeft" fixed :border='false' />
+    </template>
     <div class="optimization_check">
-      <p>请提出您的优化建议</p>
+      <p class="title">请提出您的优化建议</p>
       <van-checkbox-group v-model="result" direction="horizontal">
         <van-checkbox name="a">内容太少</van-checkbox>
         <van-checkbox name="b">经常卡顿或黑屏</van-checkbox>
@@ -11,9 +14,13 @@
         <van-checkbox name="f">手机号无法登录</van-checkbox>
       </van-checkbox-group>
     </div>
+
     <div class="optimization_text">
-      <p>请提出您的优化建议</p>
-      <van-field v-model="message" rows="1" autosize label="留言" type="textarea" placeholder="请输入留言" />
+      <p class="title">其他建议,请详细描述您的建议内容</p>
+      <van-field v-model="message" rows="2" autosize label="留言" type="textarea" maxlength="50" placeholder="描述您的建议详情，有助于我们持续优化产品。" show-word-limit />
+    </div>
+    <div class="optimization_bt">
+      <van-button round color="#FFB414" type="info">圆形按钮</van-button>
     </div>
   </div>
 </template>
@@ -23,8 +30,10 @@
 
 import Vue from 'vue';
 import { Checkbox, CheckboxGroup } from 'vant';
+import { NavBar } from 'vant';
 import { Field } from 'vant';
 
+Vue.use(NavBar);
 Vue.use(Field);
 Vue.use(Checkbox);
 Vue.use(CheckboxGroup);
@@ -33,7 +42,9 @@ export default {
   props: ["data"],
   data() {
     return {
+      title: "优化建议",
       result: [],
+      message: ""
     };
   },
   created() {
@@ -44,27 +55,36 @@ export default {
 
   },
 
-  methods: {},
+  methods: {
+    onClickLeft() {
+      this.$router.go(-1);
+    }
+  },
   components: {
   },
 }
 </script>
 
 <style lang="scss" scoped>
-@import '~@/styles/user/optimization.scss';
+@import '~@/styles/setting/optimization.scss';
 </style>
 <!-- 覆盖子组件样式 -->
 <style lang="scss" >
 .optimization-container {
-  .optimization_check {
-    p {
-      padding-left: 0.24rem;
-      font-size: 0.4267rem;
-      font-family: Source Han Sans CN;
-      font-weight: 400;
-      line-height: 0.72rem;
+  .van-nav-bar {
+    background-color: #4c4c4e;
+    .van-nav-bar__left {
+      .van-icon {
+        color: #fff;
+        font-size: 0.5405rem;
+      }
     }
-    padding-left: 0.5333rem;
+    .van-nav-bar__title {
+      color: #fff;
+      font-size: 0.4865rem;
+    }
+  }
+  .optimization_check {
     .van-checkbox {
       width: 4.32rem;
       height: 46px;
@@ -89,22 +109,23 @@ export default {
     }
   }
   .optimization_text {
-    width: 8.9333rem;
-    height: 4.5067rem;
-    background: #999999;
-    opacity: 1;
-    border-radius: 20px;
-    p {
-      padding-left: 0.24rem;
-      font-size: 0.4267rem;
-      font-family: Source Han Sans CN;
-      font-weight: 400;
-      line-height: 0.72rem;
-    }
     .van-cell {
+      width: 100%;
+      background: #999999;
+      opacity: 1;
+      border-radius: 0.2667rem;
       .van-cell__title {
         display: none;
       }
+    }
+  }
+  .optimization_bt {
+    .van-button {
+      width: 100%;
+      height: 0.96rem;
+      background: #ffb414;
+      opacity: 1;
+      border-radius: 0.48rem;
     }
   }
 }

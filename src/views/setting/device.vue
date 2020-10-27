@@ -41,7 +41,7 @@ export default {
   props: ["data"],
   data() {
     return {
-      title: "账号安全",
+      title: "登录设备管理",
       image: require('../../../static/img/touxiang.png'),
       person_img: [
         require('../../../static/img/touxiang.png'),

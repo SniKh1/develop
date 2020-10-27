@@ -7,8 +7,8 @@
     <div class="setting_box">
       <div class="set_child top">
         <van-cell-group :border="false">
-          <van-cell title="个人资料" is-link />
-          <van-cell title="账号安全" is-link />
+          <van-cell title="个人资料" is-link to="User_info" />
+          <van-cell title="账号安全" is-link to="Account" />
         </van-cell-group>
       </div>
       <div class="set_child center">
@@ -21,13 +21,14 @@
       </div>
       <div class="set_child bottom">
         <van-cell-group :border="false">
-          <van-cell title="清楚缓存"" value=" 230m" />
-          <van-cell title="优化建议" is-link />
+          <van-action-sheet v-model="showCache" :actions="actions" @select="onSelect" cancel-text="取消" close-on-click-action @cancel="onCancel" />
+          <van-cell title="清除缓存"" value=" 230m" @click="showCache = true" />
+          <van-cell title="优化建议" is-link to="optimization" />
           <van-cell title="关于我们" is-link />
         </van-cell-group>
       </div>
       <div class="out">
-        <van-cell title="清楚缓存""/>
+        <van-cell title="退出登录""/>
       </div>
       <div class=" edition">
           APP版本号：V1.0.0
@@ -44,7 +45,9 @@ import { Image as VanImage } from 'vant';
 import { Tab, Tabs } from 'vant';
 import { NavBar } from 'vant';
 import { Cell, CellGroup } from 'vant';
+import { ActionSheet } from 'vant';
 
+Vue.use(ActionSheet);
 Vue.use(Cell);
 Vue.use(CellGroup)
 Vue.use(Tab);
@@ -58,7 +61,9 @@ export default {
   props: ["data"],
   data() {
     return {
-      title: "设置"
+      title: "设置",
+      showCache: false,
+      actions: [{ name: '清除缓存' }],
     };
   },
   created() {
@@ -68,11 +73,18 @@ export default {
   mounted() {
 
   },
-
   methods: {
     onClickLeft() {
       this.$router.go(-1);
-    }
+    },
+    onSelect(item) {
+      // 默认情况下点击选项时不会自动收起
+      // 可以通过 close-on-click-action 属性开启自动收起
+      this.showCache = false;
+      Toast(item.name);
+    },
+    onCancel() {
+    },
   },
   components: {
   },
@@ -110,6 +122,34 @@ html {
         background: #4c4c4e;
         &::after {
           border-bottom: 0.02667rem solid #666666;
+        }
+      }
+      //动作面板样式
+      .van-popup {
+        width: 9.7333rem;
+        padding: 0 0.1333rem;
+        padding-bottom: 10px;
+        background-color: rgba(0, 0, 0, 0.7);
+        .van-action-sheet__cancel {
+          width: 100%;
+          background-color: #4c4c4e;
+          color: #fff;
+          border-radius: 0.2667rem;
+        }
+        .van-action-sheet__item {
+          width: 100%;
+          background-color: #4c4c4e;
+          color: #fff;
+          border-bottom-right-radius: 0.2667rem;
+          border-bottom-left-radius: 0.2667rem;
+          border-top-right-radius: 0;
+          border-top-left-radius: 0;
+        }
+
+        div {
+          width: 100%;
+          background-color: rgba(0, 0, 0, 0.7);
+          color: #fff;
         }
       }
     }

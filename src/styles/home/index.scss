@@ -20,7 +20,13 @@ html {
     padding-bottom: 2%;
 
     .van_tabs {
-      van-tab {}
+      .van_tabs {
+        padding: 0 22%;
+
+        .van-sticky {
+          padding: 0 22%;
+        }
+      }
 
       // padding: 0 0 0 22%;
 

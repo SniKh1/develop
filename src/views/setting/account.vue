@@ -7,11 +7,11 @@
     <div class="account_box">
       <div class="set_child center">
         <van-cell-group :border="false">
-          <van-cell title="手机" value="未绑定" is-link />
-          <van-cell title="微信" value="未绑定" is-link />
-          <van-cell title="邮箱" value="未绑定" is-link />
-          <van-cell title="登录密码" is-link />
-          <van-cell title="登录设备管理" is-link />
+          <van-cell title="手机" value="未绑定" is-link @click="goPhone" />
+          <van-cell title="微信" value="未绑定" is-link @click="goCheckPhone" />
+          <van-cell title="邮箱" value="未绑定" is-link @click="goEmail" />
+          <van-cell title="登录密码" is-link @click="goPassword" />
+          <van-cell title="登录设备管理" is-link to="Device" />
         </van-cell-group>
       </div>
 
@@ -58,7 +58,47 @@ export default {
 
   methods: {
     onClickLeft() {
-      this.$router.go(-1);
+      this.$router.push('Setting');
+    },
+    goPhone() {
+      this.$router.push('Bind');
+      this.$router.push({
+        name: 'Bind',
+        params: {
+          title: '输入新绑定手机号',
+          activeItem: 'phone',
+        }
+      });
+    },
+    goEmail() {
+      this.$router.push('Bind');
+      this.$router.push({
+        name: 'Bind',
+        params: {
+          title: '绑定邮箱',
+          activeItem: 'email',
+        }
+      });
+    },
+    goCheckPhone() {
+      this.$router.push('Bind');
+      this.$router.push({
+        name: 'Bind',
+        params: {
+          title: '更改手机号',
+          activeItem: 'check_phone',
+        }
+      });
+    },
+    goPassword() {
+      this.$router.push('Bind');
+      this.$router.push({
+        name: 'Bind',
+        params: {
+          title: '更改登录密码',
+          activeItem: 'password',
+        }
+      });
     }
   },
   components: {
