@@ -58,22 +58,6 @@ export default {
   computed: {
   },
   methods: {
-    // getVideo() {
-    //   videojs(
-    //     "my-video",
-    //     {
-    //       bigPlayButton: true,
-    //       textTrackDisplay: false,
-    //       videoImage: true,
-    //       errorDisplay: false,
-    //       controlBar: true
-    //     },
-    //     function() {
-    //       this.play();
-    //     }
-    //   );
-
-    // },
     getVideo() {
       videojs("my-video",
         {

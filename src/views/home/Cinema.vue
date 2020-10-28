@@ -62,7 +62,6 @@
                 <span class="modules_score">
                   2000
                   <img src="../../../static/img/fre_title.gif" alt="">
-
                 </span>
               </div>
               <div class="modules_info_bottom">
@@ -187,6 +186,9 @@ export default {
 <!-- 覆盖子组件样式 -->
 <style lang="scss" >
 .cinema-container {
+  span {
+    white-space: pre;
+  }
   .hot {
     .carousel-3d-container {
       margin: auto;

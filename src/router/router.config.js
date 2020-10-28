@@ -23,8 +23,16 @@ export const constantRouterMap = [
       {
         path: '/some',
         name: 'Some',
-        component: () => import('@/views/setting/bind/email'),
-        meta: { title: '随心看', keepAlive: true, index: 10 }
+        component: () => import('@/views/short/short'),
+        meta: { title: '随心看', keepAlive: true, index: 10 },
+        children: [
+          {
+            path: '/short_video',
+            name: 'Short_video',
+            component: () => import('@/views/short/short_video'),
+            meta: { title: '随心看视频', keepAlive: true, index: 11 }
+          }
+        ]
       },
       {
         path: '/lib',
