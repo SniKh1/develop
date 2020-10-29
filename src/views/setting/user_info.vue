@@ -128,7 +128,7 @@ export default {
     },
     //修改生日
     checkOut(value) {
-      debugger
+
       this.showSelectBirth = false;
     }
   },

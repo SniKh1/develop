@@ -180,6 +180,7 @@ html {
       }
 
       #list {
+        overflow    : -moz-scrollbars-none;
         overflow-x  : auto; //设置x轴可滑动 
         overflow-y  : hidden; //设置x轴可滑动 
         list-style  : none; //去掉li上的小点 

@@ -37,7 +37,7 @@ export default {
     $route(to, from) {
       console.log(to, from)
       if (to.path == "/bind") {
-        debugger
+
         this.title = this.$route.params.title;
         this.activeItem = this.$route.params.activeItem;
       }
