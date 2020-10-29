@@ -45,6 +45,20 @@
           </div>
         </div>
       </div>
+      <div class="video_box">
+        <video id="video4" class="video-js vjs-default-skin vjs-big-play-centered">
+          <source src="http://gt.shigemedia.com/vod/dianshiju/shendunjutegongdi2ji/tv/shendunjutegongdi2jidi1ji.mp4" type="application/x-mpegURL" />
+        </video>
+        <div class="video_box_center">
+          <van-button :icon="playIcon" type="info">
+            哈利·波特与魔法石
+          </van-button>
+          <div class="right">
+            <span><img src="../../../static/img/share_b.png" alt="">567</span>
+            <span class="span_end"><img src="../../../static/img/z_t.png" alt="">123</span>
+          </div>
+        </div>
+      </div>
     </template>
   </div>
 </template>
@@ -73,6 +87,9 @@ export default {
         {
           ele_id: "video3"
         },
+        {
+          ele_id: "video4"
+        },
       ]
     }
   },
@@ -93,12 +110,9 @@ export default {
   methods: {
 
     getVideo() {
-
       let arrStr = this.videoArr;
-
       for (let index = 0; index < arrStr.length; index++) {
         const element = arrStr[index];
-
         videojs(element.ele_id,
           {
             autoplay: false,
@@ -145,7 +159,6 @@ export default {
           },
           function() {
             console.log('视频可以播放了', this);
-
             this.pause();
           }
         );
