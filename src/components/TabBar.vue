@@ -1,5 +1,5 @@
 <template>
-  <van-tabbar v-model="active" class="active_tab">
+  <van-tabbar v-model="active" class="active_tab" fixed :border='false' active-color="#ffc53d">
     <van-tabbar-item v-for="(item,index) in tabbars" :key="index" @click="tab(index,item.name)">
       <span :class="currIndex == index ? active:''">{{item.title}}</span>
       <template slot="icon" slot-scope="props">
@@ -58,14 +58,18 @@ export default {
   width: 26px;
   height: 26px;
 }
-
-.van-tabbar-item--active {
-  color: #ffc53d;
-}
 .van-tabbar-item {
   color: #dddddd;
 }
 .van-tabbar {
   background-color: #333;
+}
+
+.active_tab {
+  width: 100%;
+  padding-bottom: env(safe-area-inset-bottom);
+  position: fixed;
+  bottom: 0;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
 }
 </style>

@@ -18,3 +18,4 @@
 [1022/164754.052:ERROR:filesystem_win.cc(129)] GetFileAttributes C:\Users\sg\AppData\Local\Microsoft\Edge\User Data\Crashpad\attachments\e94e483b-29cc-4cc9-a02c-9dcfaa90c3e4: 系统找不到指定的路径。 (0x3)
 [1022/164754.068:ERROR:filesystem_win.cc(129)] GetFileAttributes C:\Users\sg\AppData\Local\Microsoft\Edge\User Data\Crashpad\attachments\e98308df-8727-45d2-9834-5a6905fe765f: 系统找不到指定的路径。 (0x3)
 [1022/164754.083:ERROR:filesystem_win.cc(129)] GetFileAttributes C:\Users\sg\AppData\Local\Microsoft\Edge\User Data\Crashpad\attachments\c667ceb9-21f9-47e3-a7df-08dd8f9a4e05: 系统找不到指定的路径。 (0x3)
+[1111/172303.893:ERROR:directory_reader_win.cc(43)] FindFirstFile: 系统找不到指定的路径。 (0x3)

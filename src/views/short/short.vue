@@ -118,13 +118,18 @@ html {
     .van-tabs {
       .van-tabs__wrap {
         padding-bottom: 0.2667rem;
+        height: 1.88rem;
+
         .van-tab {
           .van-tab__text {
             font-size: 0.4267rem;
             color: #999;
           }
         }
-
+        .van-tabs__nav {
+          padding-top: 0.6rem;
+          height: 1.28rem;
+        }
         .van-tab--active {
           .van-tab__text {
             font-size: 0.4267rem;
@@ -133,6 +138,7 @@ html {
         }
         .van-tabs__line {
           border-radius: 0.32rem;
+          bottom: 0.5rem;
         }
       }
     }

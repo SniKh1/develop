@@ -113,9 +113,6 @@
         </ul>
       </div>
     </div>
-    <div class="poster">
-      <img src="/static/img/poster_1.png" alt="">
-    </div>
     <div class="new">
       <span class="layout_title">
         高能新剧
@@ -136,7 +133,7 @@
       <div class="new_title_name">蜘蛛侠：平行宇宙</div>
     </div>
     <div class="navbar">
-      <van-tabs class="" sticky swipeable color="#333" offset-top='44'>
+      <van-tabs class="" sticky swipeable color="#333" offset-top='66'>
         <van-tab class="" v-for="(bar_title, index) in navbar" :key="index">
           <template #title>
             <div class="tab_bar" :class="index == navbar.length-1 ? 'active_bar' : ''">
@@ -388,6 +385,14 @@ export default {
 </style>
 <!-- 覆盖子组件样式 -->
 <style lang="scss" >
+html::-webkit-scrollbar,
+body::-webkit-scrollbar,
+*::-webkit-scrollbar {
+  width: 0px;
+  height: 0px;
+  display: none;
+}
+
 .new {
   width: 100%;
   .carousel-3d-container {

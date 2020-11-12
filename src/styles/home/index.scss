@@ -1,20 +1,11 @@
 html {
   * {
-    // background-color: #333;
     font-family: Source Han Sans CN;
   }
 
-  // span {
-
-  //   overflow     : hidden !important;
-  //   /*超出部分隐藏*/
-  //   white-space  : nowrap !important;
-  //   /*不换行*/
-  //   text-overflow: ellipsis !important;
-  //   /*超出部分文字以...显示*/
-
-  // }
-
+  body::-webkit-scrollbar {
+    width: 0 !important
+  }
 
   .index-container {
     padding-bottom: 2%;
@@ -35,6 +26,8 @@ html {
 
         img {
           width : 40%;
+          width : 0.48rem;
+          height: 0.48rem;
           margin: 0 auto;
         }
 

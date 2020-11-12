@@ -44,6 +44,8 @@ html {
     padding-bottom: 2%;
 
     .banner {
+      position: relative;
+
       .swipe_box {
         .swipe_item {
           width : 100%;
@@ -79,18 +81,17 @@ html {
       }
 
       .swipe_info {
-        position         : absolute;
-        // top           : 42.85%;
-        top              : 6.5rem;
-        font-family      : Source Han Sans CN;
-        font-size        : 0.4865rem;
-        font-weight      : normal;
-        font-stretch     : normal;
-        line-height      : 0.6486rem;
-        letter-spacing   : 0rem;
-        color            : #ffff;
-        white-space      : nowrap;
-        padding-left     : 4%;
+        position      : absolute;
+        bottom        : 0.5333rem;
+        font-family   : Source Han Sans CN;
+        font-size     : 0.4865rem;
+        font-weight   : normal;
+        font-stretch  : normal;
+        line-height   : 0.6486rem;
+        letter-spacing: 0rem;
+        color         : #ffff;
+        white-space   : nowrap;
+        padding-left  : 4%;
 
         .swipe_score {
           color: #ffc53d;

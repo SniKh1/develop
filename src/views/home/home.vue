@@ -80,8 +80,8 @@ export default {
     tab(name, title) {
     },
     onClickDisabled(name, title) {
-      Toast(name + '已被禁用');
-    },
+      this.$router.push("Record")
+    }
   },
   components: {
     'screen': screen,  //将别名screen变成 组件 screen
@@ -93,4 +93,41 @@ export default {
 
 <style lang="scss" scoped>
 @import '~@/styles/home/index.scss';
+</style>
+<style lang="scss">
+html::-webkit-scrollbar,
+body::-webkit-scrollbar,
+*::-webkit-scrollbar {
+  width: 0px;
+  height: 0px;
+  display: none;
+}
+
+html {
+  .index-container {
+    .van_tabs {
+      .van-sticky {
+        .van-tabs__wrap {
+          height: 1.88rem;
+          .van-tabs__line {
+            bottom: 0.5rem;
+          }
+          .van-tabs__nav {
+            padding-top: 0.6rem;
+            height: 1.28rem;
+          }
+        }
+      }
+    }
+    .layout-footer {
+      .van-hairline--top-bottom::after {
+        border-width: 0 !important;
+        border-bottom: none;
+      }
+      .active_tab {
+        padding-bottom: none;
+      }
+    }
+  }
+}
 </style>

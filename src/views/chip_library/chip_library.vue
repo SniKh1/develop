@@ -130,7 +130,7 @@ export default {
 .header {
   .van-nav-bar {
     background-color: #333;
-    height: 1.375rem;
+    height: 2.3467rem;
 
     .van-nav-bar__title {
       color: #fff;

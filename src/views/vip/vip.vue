@@ -2,47 +2,51 @@
 
 <template>
   <div class="vip-container">
-    <template>
-      <van-nav-bar title="" left-text="" right-text=" " left-arrow @click-left=" onClickLeft" fixed :border='false' />
-    </template>
-    <template>
-      <div class="vip_box">
-        <div class="vip_header" v-for="(image, index) in person_img">
-          <van-image round width="70" height="70" lazy-load :src="image" />
-          <div class="user_info">
-            <span class="user_name">juliana</span>
-            <!-- <p>会员到期：<span class="user_vip_date">2020-12-12</span></p> -->
-            <p>未开通会员</p>
-          </div>
-        </div>
-        <div class="vip_body">
-          <div class="vip_body_top">
-            <div class="price_box left">
-              <div class="left_title"><span>新用户专享</span></div>
-              <span class="price_span">9.9￥</span>
-              <span class="price_month">
-                包月
-              </span>
+    <div>
+      <div>
+        <template>
+          <van-nav-bar title="" left-text="" right-text=" " left-arrow @click-left=" onClickLeft" fixed :border='false' />
+        </template>
+        <template>
+          <div class="vip_box">
+            <div class="vip_header" v-for="(image, index) in person_img">
+              <van-image round width="70" height="70" lazy-load :src="image" />
+              <div class="user_info">
+                <span class="user_name">juliana</span>
+                <!-- <p>会员到期：<span class="user_vip_date">2020-12-12</span></p> -->
+                <p>未开通会员</p>
+              </div>
             </div>
-            <div class="price_box center">
-              <div class="left_title"><span>折扣</span></div>
-              <span class="price_span">66￥</span>
-              <span class="price_month">3个月</span>
-            </div>
-            <div class="price_box right">
-              <div class="left_title"><span>推荐</span></div>
-              <span class="price_span">300￥</span>
-              <span class="price_month">12个月</span>
+            <div class="vip_body">
+              <div class="vip_body_top">
+                <div class="price_box left">
+                  <div class="left_title"><span>新用户专享</span></div>
+                  <span class="price_span">9.9￥</span>
+                  <span class="price_month">
+                    包月
+                  </span>
+                </div>
+                <div class="price_box center">
+                  <div class="left_title"><span>折扣</span></div>
+                  <span class="price_span">66￥</span>
+                  <span class="price_month">3个月</span>
+                </div>
+                <div class="price_box right">
+                  <div class="left_title"><span>推荐</span></div>
+                  <span class="price_span">300￥</span>
+                  <span class="price_month">12个月</span>
+                </div>
+              </div>
+              <div class="vip_body_center">APP+TV双平台通用</div>
+              <div class="vip_body_center">
+                <van-button round type="info"></van-button>
+              </div>
             </div>
           </div>
-          <div class="vip_body_center">APP+TV双平台通用</div>
-          <div class="vip_body_center">
-            <van-button round type="info"></van-button>
-          </div>
-        </div>
+          <div class="vip_bg"><img src="../../../static/img/vip_bg_box.png" alt=""></div>
+        </template>
       </div>
-      <div class="vip_bg"><img src="../../../static/img/vip_bg_box.png" alt=""></div>
-    </template>
+    </div>
   </div>
 </template>
 
