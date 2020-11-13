@@ -5,9 +5,9 @@
         <router-view></router-view>
       </keep-alive>
       <router-view v-else></router-view>
-    </div>
-    <div class="layout-footer">
-      <TabBar :data="tabbars" @change="handleChange" />
+      <div class="layout-footer">
+        <TabBar :data="tabbars" @change="handleChange" />
+      </div>
     </div>
   </div>
 </template>

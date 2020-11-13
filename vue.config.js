@@ -10,32 +10,32 @@ const name = defaultSettings.title || 'vue mobile template'
 const IS_PROD = ['production', 'prod'].includes(process.env.NODE_ENV)
 
 // externals
-// const externals = {
-//   vue: 'Vue',
-//   'vue-router': 'VueRouter',
-//   vuex: 'Vuex',
-//   vant: 'vant',
-//   axios: 'axios'
-// }
+const externals = {
+  vue: 'Vue',
+  'vue-router': 'VueRouter',
+  vuex: 'Vuex',
+  vant: 'vant',
+  axios: 'axios'
+}
 // CDN外链，会插入到index.html中
-// const cdn = {
-//   // 开发环境
-//   dev: {
-//     css: [],
-//     js: []
-//   },
-//   // 生产环境
-//   build: {
-//     css: ['https://cdn.jsdelivr.net/npm/vant@2.4.7/lib/index.css'],
-//     js: [
-//       'https://cdn.jsdelivr.net/npm/vue@2.6.11/dist/vue.min.js',
-//       'https://cdn.jsdelivr.net/npm/vue-router@3.1.5/dist/vue-router.min.js',
-//       'https://cdn.jsdelivr.net/npm/axios@0.19.2/dist/axios.min.js',
-//       'https://cdn.jsdelivr.net/npm/vuex@3.1.2/dist/vuex.min.js',
-//       'https://cdn.jsdelivr.net/npm/vant@2.4.7/lib/index.min.js'
-//     ]
-//   }
-// }
+const cdn = {
+  // 开发环境
+  dev: {
+    css: [],
+    js: []
+  },
+  // 生产环境
+  build: {
+    css: ['https://cdn.jsdelivr.net/npm/vant@2.4.7/lib/index.css'],
+    js: [
+      'https://cdn.jsdelivr.net/npm/vue@2.6.11/dist/vue.min.js',
+      'https://cdn.jsdelivr.net/npm/vue-router@3.1.5/dist/vue-router.min.js',
+      'https://cdn.jsdelivr.net/npm/axios@0.19.2/dist/axios.min.js',
+      'https://cdn.jsdelivr.net/npm/vuex@3.1.2/dist/vuex.min.js',
+      'https://cdn.jsdelivr.net/npm/vant@2.4.7/lib/index.min.js'
+    ]
+  }
+}
 
 module.exports = {
   publicPath: './', // 署应用包时的基本 URL。 vue-router hash 模式使用

@@ -3,13 +3,13 @@
   <div class="screen-container">
     <div class="banner">
       <van-swipe :autoplay="3000" @change="handleChange">
-        <van-swipe-item v-for="(image, index) in images" :key="index" class="swipe_box">
-          <img @click="goVideo" class="swipe_item" v-lazy="image" />
+        <van-swipe-item v-for="(item, index) in banner" :key="index" class="swipe_box">
+          <img @click="goVideo" class="swipe_item" v-lazy="item.img" />
         </van-swipe-item>
         <template #indicator>
           <div class="custom-indicator">
             <div class="van-swipe__indicators">
-              <i class="van-swipe__indicator" v-for="(item,index) in images" :class="{ 'van-swipe__indicator--active': index === mySwipeIndex }"></i>
+              <i class="van-swipe__indicator" v-for="(item,index) in banner" :class="{ 'van-swipe__indicator--active': index === mySwipeIndex }"></i>
             </div>
           </div>
         </template>
@@ -188,10 +188,22 @@ export default {
   props: ["data"],
   data() {
     return {
-      images: [
-        require('../../../static/img/banner_1.png'),
-        require('../../../static/img/banner_2.png'),
-        require('../../../static/img/banner_3.png'),
+      banner: [
+        {
+          img: require('../../../static/img/banner_1.png'),
+          name: '蜘蛛侠:平行宇宙',
+          score: '9.9'
+        },
+        {
+          img: require('../../../static/img/banner_2.png'),
+          name: '蜘蛛侠:平行宇宙',
+          score: '9.9'
+        },
+        {
+          img: require('../../../static/img/banner_3.png'),
+          name: '蜘蛛侠:平行宇宙',
+          score: '9.9'
+        }
       ],
       lately_img: [
         require('../../../static/img/lately_img1.png'),
@@ -374,6 +386,17 @@ export default {
         }
       }, 1000);
     },
+    //请求数据
+    queryData: function() {
+      //获取banner数据
+      axios.get(url, params)
+        .then(res => {
+          console.log(res)
+        })
+        .catch(err => {
+          console.error(err);
+        })
+    }
   },
   components: {
   },
@@ -421,6 +444,11 @@ body::-webkit-scrollbar,
       top: 1.1351rem;
       .van-tabs__wrap {
         height: 2.7027rem;
+      }
+    }
+    .van-tabs__wrap {
+      .van-tabs__nav {
+        padding-top: 0 !important;
       }
     }
   }
