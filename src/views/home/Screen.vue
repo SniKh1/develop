@@ -168,6 +168,7 @@
 
 <script>
 // :oneDirectional="true" 3d空间单向控制 default false
+import { searchDataAPI, recommendDataAPI } from '@/api/api'
 
 import Vue from 'vue';
 import { Swipe, SwipeItem } from 'vant';
@@ -352,13 +353,13 @@ export default {
   computed: {},
 
   mounted() {
-
+    this.searchData()
+    this.recommendData()
   },
 
   methods: {
     handleChange(index) {
       console.log(index);
-
       this.mySwipeIndex = index;
     },
     goMore() {
@@ -386,16 +387,14 @@ export default {
         }
       }, 1000);
     },
-    //请求数据
-    queryData: function() {
-      //获取banner数据
-      axios.get(url, params)
-        .then(res => {
-          console.log(res)
-        })
-        .catch(err => {
-          console.error(err);
-        })
+    //搜索接口调用
+    searchData: async function() {
+      const searchRes = await searchDataAPI({ searchcontent: "a", page: "1", rows: "5" })
+      console.log(searchRes)
+    },
+    recommendData: async function() {
+      const searchRes = await recommendDataAPI({ model: "banner", type: "recommend", page: "1", rows: "5" })
+      console.log(searchRes)
     }
   },
   components: {

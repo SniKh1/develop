@@ -46,24 +46,38 @@ module.exports = {
   productionSourceMap: false, // 如果你不需要生产环境的 source map，可以将其设置为 false 以加速生产环境构建。
   runtimeCompiler: true,
   devServer: {
-    port: 9020, // 端口
-    open: false, // 启动后打开浏览器
     overlay: {
-      //  当出现编译器错误或警告时，在浏览器中显示全屏覆盖层
-      warnings: false,
+      // 让浏览器 overlay 同时显示警告和错误
+      warnings: true,
       errors: true
+    },
+    host: 'localhost',
+    port: 9020, // 端口号
+    https: false, // https:{type:Boolean}
+    open: false, //配置后自动启动浏览器
+    hotOnly: true, // 热更新
+    // proxy: 'http://localhost:8080'   // 配置跨域处理,只有一个代理
+    proxy: {
+      //配置多个跨域
+      '/api': {
+        target: 'http://192.168.0.141:8080',
+        changeOrigin: true,
+        ws: true, //websocket支持
+        secure: false,
+        pathRewrite: {
+          '^/api': '/'
+        }
+      },
+      '/api2': {
+        target: 'http://197.0.0.2:8088',
+        changeOrigin: true,
+        //ws: true,//websocket支持
+        secure: false,
+        pathRewrite: {
+          '^/api2': '/'
+        }
+      }
     }
-    // proxy: {
-    //   //配置跨域
-    //   '/api': {
-    //       target: "https://test.xxx.com",
-    //       // ws:true,
-    //       changOrigin:true,
-    //       pathRewrite:{
-    //           '^/api':'/'
-    //       }
-    //   }
-    // }
   },
   css: {
     extract: IS_PROD, // 是否将组件中的 CSS 提取至一个独立的 CSS 文件中 (而不是动态注入到 JavaScript 中的 inline 代码)。
