@@ -5,6 +5,10 @@
       <van-swipe :autoplay="3000" @change="handleChange">
         <van-swipe-item v-for="(item, index) in banner" :key="index" class="swipe_box">
           <img @click="goVideo" class="swipe_item" v-lazy="item.img" />
+          <div class="swipe_info">
+            <span class="swipe_title">{{item.name}}</span>
+            <span class="swipe_score">{{item.score}}</span>
+          </div>
         </van-swipe-item>
         <template #indicator>
           <div class="custom-indicator">
@@ -13,13 +17,9 @@
             </div>
           </div>
         </template>
+
       </van-swipe>
-      <template>
-        <div class="swipe_info">
-          <span class="swipe_title">蜘蛛侠:平行宇宙</span>
-          <span class="swipe_score">8.6</span>
-        </div>
-      </template>
+
     </div>
     <div class="lately">
       <span class="layout_title">
@@ -192,17 +192,17 @@ export default {
       banner: [
         {
           img: require('../../../static/img/banner_1.png'),
-          name: '蜘蛛侠:平行宇宙',
+          name: '蜘蛛侠:平行宇宙1',
           score: '9.9'
         },
         {
           img: require('../../../static/img/banner_2.png'),
-          name: '蜘蛛侠:平行宇宙',
+          name: '蜘蛛侠:平行宇宙2',
           score: '9.9'
         },
         {
           img: require('../../../static/img/banner_3.png'),
-          name: '蜘蛛侠:平行宇宙',
+          name: '蜘蛛侠:平行宇宙3',
           score: '9.9'
         }
       ],
@@ -354,7 +354,7 @@ export default {
 
   mounted() {
     this.searchData()
-    this.recommendData()
+    this.bannerData()
   },
 
   methods: {
@@ -392,9 +392,13 @@ export default {
       const searchRes = await searchDataAPI({ searchcontent: "a", page: "1", rows: "5" })
       console.log(searchRes)
     },
-    recommendData: async function() {
-      const searchRes = await recommendDataAPI({ model: "banner", type: "recommend", page: "1", rows: "5" })
-      console.log(searchRes)
+    bannerData: async function() {
+      const bannerRes = await recommendDataAPI({ model: "banner", type: "recommend", page: "1", rows: "5" })
+      console.log(bannerRes)
+      for (let index = 0; index < bannerRes.data.data.length; index++) {
+        const element = array[index];
+      }
+      console.log(this.banner)
     }
   },
   components: {
